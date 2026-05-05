@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "Your Business Name",
+    "language": "en"
+  },
+  "seo": {
+    "title": "Your Business — Modern Solutions for Growing Brands",
+    "description": "We help businesses grow through strategic services, clear communication, and a modern digital presence.",
+    "canonical": "https://yourbusiness.com/",
+    "ogImage": "/assets/images/og-image.png"
+  },
+  "design": {
+    "theme": "friendly",
+    "stylesheet": "friendly-startup.css",
+    "heroVariant": "centered",
+    "serviceStyle": "service-card-icon",
+    "processStyle": "default",
+    "galleryStyle": "gallery-hero-full",
+    "testimonialStyle": "testimonial-quote"
+  },
+  "hero": {
+    "headline": "Build with confidence.</br>Grow with clarity.",
+    "subheadline": "Professional services that simplify your workflow and elevate your brand",
+    "image": "/assets/images/hero-image.png",
+    "cta": {
+      "label": "Get Started",
+      "url": "#contact"
+    }
+  },
+  "cta": {
+    "headline": "Your success is our priority from start to finish.",
+    "button": {},
+    "name": "",
+    "email": "",
+    "phone": "",
+    "image": "/assets/images/profile.jpg",
+    "description": "We provide clear guidance, reliable support, and solutions tailored to your goals. Let’s build something that moves your business forward."
+  },
+  "navigation": [
+    {
+      "label": "Services",
+      "url": "#services"
+    },
+    {
+      "label": "Process",
+      "url": "#process"
+    },
+    {
+      "label": "Contact",
+      "url": "#contact"
+    }
+  ],
+  "services": [
+    {
+      "title": "Custom Strategy & Planning",
+      "gradient": "linear-gradient(135deg, #00c6ff, #0072ff)",
+      "icon": "bi-clipboard-check",
+      "description": "We create tailored strategies built around your business goals. Clear steps, realistic timelines, and a roadmap that keeps your team aligned and moving forward."
+    },
+    {
+      "title": "Professional Execution",
+      "icon": "bi-stopwatch",
+      "description": "From design to development to operations, we execute with precision. Every task has purpose, and every deliverable supports your long‑term vision."
+    },
+    {
+      "title": "Data‑Driven Growth",
+      "icon": "bi-bar-chart",
+      "description": "We track meaningful metrics, refine your systems, and help you build momentum. Small improvements compound into measurable business growth."
+    }
+  ],
+  "training_packages": [
+    {
+      "number": "01",
+      "title": "Starter Package — $35/month",
+      "tagline": "Perfect for new businesses or teams needing structure and direction.",
+      "duration": "",
+      "focus": [],
+      "description": "Build a strong foundation with guided planning, consistent check‑ins, and essential tools to help your business operate smoothly.",
+      "gradient": "linear-gradient(135deg, #0a84ff15, #ffd60a15)"
+    },
+    {
+      "number": "02",
+      "title": "Growth Package — $50/month",
+      "tagline": "Ideal for businesses preparing for expansion, launches, or major initiatives.",
+      "duration": "",
+      "focus": [],
+      "description": "Includes weekly feedback, strategy sessions, and tailored planning to help you execute projects with confidence and clarity.",
+      "gradient": "linear-gradient(135deg, rgba(0,122,255,0.12), rgba(135,206,250,0.12))"
+    },
+    {
+      "number": "03",
+      "title": "Premium Package — $75/month",
+      "tagline": "For businesses seeking high‑touch support, optimization, and long‑term growth.",
+      "duration": "",
+      "focus": [],
+      "description": "Hands‑on consulting with detailed reviews, performance tracking, and adaptive planning to help you reach your most important goals.",
+      "gradient": "linear-gradient(135deg, rgba(255,94,58,0.12), rgba(255,195,0,0.12))"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/assets/images/gallery-1.jpg",
+      "caption": "Collaborating with clients to build effective solutions."
+    },
+    {
+      "image": "/assets/images/gallery-2.jpg",
+      "caption": "Designing modern, user‑focused digital experiences."
+    },
+    {
+      "image": "/assets/images/gallery-3.jpg",
+      "caption": "Celebrating successful launches and project milestones."
+    }
+  ],
+  "about": {
+    "aboutVariant": "about-left-image",
+    "headline": "About Our Business",
+    "image": "/assets/images/about.jpg",
+    "description": "With years of experience across multiple industries, we help businesses grow through strategic planning, modern design, and reliable execution. Our mission is to provide clarity, confidence, and long‑term support for every client we work with."
+  },
+  "footer": {
+    "text": "© 2026 Your Business. All rights reserved.",
+    "links": [
+      {
+        "label": "Privacy",
+        "url": "/privacy.html"
+      },
+      {
+        "label": "Terms",
+        "url": "/terms.html"
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "What People Say",
+    "variant": "testimonials-spotlight",
+    "itemStyle": "spotlight",
+    "items": [
+      {
+        "text": "Grant transformed our entire workflow.",
+        "author": "Sarah M.",
+        "role": "Founder, BrightPath",
+        "avatar": "/peal-paced/assets/images/sarah.jpg"
+      },
+      {
+        "text": "Clean, modern, and fast. Exactly what we needed.",
+        "author": "James R.",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      }
+    ]
+  },
+    "form": {
+    "variant": "form-email",
+    "headline": "Get in Touch",
+    "description": "Have questions or ready to start your training journey? Send me a message and I’ll get back to you as soon as possible.",
+    "buttonLabel": "Send Message"
+  }
+}
