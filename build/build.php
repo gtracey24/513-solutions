@@ -51,7 +51,7 @@ $pageContent = str_replace(
 $pageContent = str_replace(
   '{{SECTION_ABOUT}}',
   file_get_contents(
-    $root . "/templates/sections/about/{$config['about']['aboutVariant']}.html"
+    $root . "/templates/sections/about/{$config['design']['aboutVariant']}.html"
   ),
   $pageContent
 );
@@ -88,7 +88,7 @@ $pageContent = str_replace(
 $pageContent = str_replace(
   '{{SECTION_TESTIMONIALS}}',
   file_get_contents(
-    $root . "/templates/sections/testimonials/{$config['testimonials']['variant']}.html"
+    $root . "/templates/sections/testimonials/{$config['design']['testimonialVariant']}.html"
   ),
   $pageContent
 );
@@ -97,7 +97,7 @@ $pageContent = str_replace(
 $pageContent = str_replace(
   '{{SECTION_FORM}}',
   file_get_contents(
-    $root . "/templates/sections/form/{$config['form']['variant']}.html"
+    $root . "/templates/sections/form/{$config['design']['formVariant']}.html"
   ),
   $pageContent
 );
@@ -209,23 +209,30 @@ $testimonialTemplate = file_get_contents(
   $root . "/templates/components/testimonials/{$config['testimonials']['itemStyle']}.html"
 );
 
+$index = 0;
+
 if (!empty($config['testimonials']['items'])) {
   foreach ($config['testimonials']['items'] as $t) {
+
     $testimonialHtml .= str_replace(
       [
         '{{TESTIMONIAL_TEXT}}',
         '{{TESTIMONIAL_AUTHOR}}',
         '{{TESTIMONIAL_ROLE}}',
-        '{{TESTIMONIAL_AVATAR}}'
+        '{{TESTIMONIAL_AVATAR}}',
+        '{{ACTIVE_CLASS}}'
       ],
       [
         $t['text'],
         $t['author'],
         $t['role'],
-        $t['avatar'] ?? ''
+        $t['avatar'] ?? '',
+        $index === 0 ? 'active' : ''
       ],
       $testimonialTemplate
     );
+
+    $index++;
   }
 }
 
@@ -234,6 +241,9 @@ $pageContent = str_replace(
   $testimonialHtml,
   $pageContent
 );
+
+
+
 
 /* FAQ ITEMS */
 $faqHtml = '';
@@ -381,7 +391,7 @@ $replacements = [
   '{{ABOUT_IMAGE}}'        => $config['about']['image'] ?? '',
 
 // TESTIMONIALS
-'{{TESTIMONIALS_VARIANT}}' => $config['testimonials']['variant'] ?? '',
+'{{TESTIMONIALS_VARIANT}}' => $config['design']['testimonialVariant'] ?? '',
 '{{TESTIMONIALS_HEADLINE}}' => $config['testimonials']['headline'] ?? '',
 
 // FORM

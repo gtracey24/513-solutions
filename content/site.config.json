@@ -13,10 +13,12 @@
     "theme": "friendly",
     "stylesheet": "friendly-startup.css",
     "heroVariant": "centered",
+    "aboutVariant": "about-left-image",
     "serviceStyle": "service-card-icon",
     "processStyle": "default",
     "galleryStyle": "gallery-hero-full",
-    "testimonialStyle": "testimonial-quote"
+    "testimonialVariant": "testimonials-carousel",
+    "formVariant": "form-email"
   },
   "hero": {
     "headline": "Build with confidence.</br>Grow with clarity.",
@@ -112,7 +114,6 @@
     }
   ],
   "about": {
-    "aboutVariant": "about-left-image",
     "headline": "About Our Business",
     "image": "/assets/images/about.jpg",
     "description": "With years of experience across multiple industries, we help businesses grow through strategic planning, modern design, and reliable execution. Our mission is to provide clarity, confidence, and long‑term support for every client we work with."
@@ -132,8 +133,7 @@
   },
   "testimonials": {
     "headline": "What People Say",
-    "variant": "testimonials-spotlight",
-    "itemStyle": "spotlight",
+    "itemStyle": "carousel-item-fb",
     "items": [
       {
         "text": "Grant transformed our entire workflow.",
@@ -150,7 +150,6 @@
     ]
   },
     "form": {
-    "variant": "form-email",
     "headline": "Get in Touch",
     "description": "Have questions or ready to start your training journey? Send me a message and I’ll get back to you as soon as possible.",
     "buttonLabel": "Send Message"
