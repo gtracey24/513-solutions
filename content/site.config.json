@@ -1,10 +1,10 @@
 {
   "site": {
-    "name": "Your Business Name",
+    "name": "513 Solutions",
     "language": "en"
   },
   "seo": {
-    "title": "Your Business — Modern Solutions for Growing Brands",
+    "title": "513 Solutions — Handyman/Remodeling Services in Edwardsville, IL",
     "description": "We help businesses grow through strategic services, clear communication, and a modern digital presence.",
     "canonical": "https://yourbusiness.com/",
     "ogImage": "/assets/images/og-image.png"
@@ -14,7 +14,7 @@
     "stylesheet": "friendly-startup.css",
     "heroVariant": "centered",
     "aboutVariant": "about-left-image",
-    "serviceStyle": "service-card-icon",
+    "serviceStyle": "service-card-reveal",
     "processStyle": "default",
     "galleryStyle": "gallery-hero-full",
     "testimonialVariant": "testimonials-carousel",
@@ -54,19 +54,19 @@
   ],
   "services": [
     {
-      "title": "Custom Strategy & Planning",
-      "gradient": "linear-gradient(135deg, #00c6ff, #0072ff)",
-      "icon": "bi-clipboard-check",
+      "title": "Interior Work",
+      "gradient": "",
+      "icon": "",
       "description": "We create tailored strategies built around your business goals. Clear steps, realistic timelines, and a roadmap that keeps your team aligned and moving forward."
     },
     {
-      "title": "Professional Execution",
-      "icon": "bi-stopwatch",
+      "title": "Exterior Work",
+      "icon": "",
       "description": "From design to development to operations, we execute with precision. Every task has purpose, and every deliverable supports your long‑term vision."
     },
     {
-      "title": "Data‑Driven Growth",
-      "icon": "bi-bar-chart",
+      "title": "Repair/Maintenance",
+      "icon": "",
       "description": "We track meaningful metrics, refine your systems, and help you build momentum. Small improvements compound into measurable business growth."
     }
   ],
@@ -136,14 +136,62 @@
     "itemStyle": "carousel-item-fb",
     "items": [
       {
-        "text": "Grant transformed our entire workflow.",
-        "author": "Sarah M.",
+        "text": "Jordan and his crew did a fantastic job replacing our back outside steps. The craftsmanship and attention to detail were simply amazing. We wouldn’t hesitate to recommend them and will definitely call them again.",
+        "author": "Melissa Schuetz Wilkinson",
         "role": "Founder, BrightPath",
         "avatar": "/peal-paced/assets/images/sarah.jpg"
       },
       {
-        "text": "Clean, modern, and fast. Exactly what we needed.",
-        "author": "James R.",
+        "text": "Jordan and his crew were awesome.  Quality work, arrived on the dot when they said they would, will definitely reach out for my next project.",
+        "author": "John Dowdy",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Very highly recommend!  Punctual quotes, timely with services, great quality work, and very kind, professional staff!",
+        "author": "Kath Szed",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordan and his team have completed multiple tasks for us over the past few years. Jordan does a wonderful job of evaluating and explaining how the job will be accomplished. The work is completed with excellence, integrity and professionalism. We highly recommend 513 to our family and friends.",
+        "author": "Romona Hartman Smith",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon and team did a great job moving my laundry room from the basement to the main floor of my house. Great guys to work with! I really appreciate it!",
+        "author": "Justin Sandbach",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon and 513 Solutions fixed a problem with my roof and dormer. They were quick and professional. I'm extremely happy with the way the work turned out. I wouldn't hesitate to recommend them to my family and friends and I will be definitely be calling them again.",
+        "author": "Grant Andree",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "513 Solutions came highly recommended by two close friends . . . and the company did not disappoint! They were kind, professional, and on-time which is important when managing a busy schedule and trusting someone into your home. During a stressful time of multiple issues, they eased my worries with their knowledge, resources, and great communication.",
+        "author": "Jessica Lynn Ambuehl",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Amazing from start to finish. Here when they said…which can be rare! All over paint and Drywall repair and it’s flawless! 12 stars out of 10!",
+        "author": "Christopher Stevens",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Very efficient, professional and incredibly easy to work with! Highly recommend!",
+        "author": "Metro East Humane Society",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon did a terrific job on my fence! everything from quote to finish was professional, timely & affordable. I am looking forward to more projects in the future.",
+        "author": "Beth Miller Mitchell",
         "role": "Creative Director",
         "avatar": "/assets/images/james.jpg"
       }

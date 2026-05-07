@@ -216,8 +216,7 @@ body.theme-friendly .testimonial-carousel-item {
   SERVICES
 ------------------------------------------------------------ */
 
-.service-block {
-  background: transparent;        /* no card background */
+.service-block {        /* no card background */
   border: none;                   /* no border */
   box-shadow: none;               /* remove Bootstrap card shadow */
   border-radius: 0;               /* optional: remove rounding */
