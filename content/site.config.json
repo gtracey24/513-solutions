@@ -57,17 +57,27 @@
       "title": "Interior Work",
       "gradient": "",
       "icon": "",
-      "description": "We create tailored strategies built around your business goals. Clear steps, realistic timelines, and a roadmap that keeps your team aligned and moving forward."
+      "image": "/assets/images/interior.jpg",
+      "id": "interior",
+      "description": "From cosmetic updates to functional improvements, we handle the projects that make your home feel polished and comfortable. Whether it’s repairing damaged drywall, installing new flooring, or refreshing a room with paint, we bring craftsmanship and attention to detail to every interior space.",
+      "focus": ["Drywall", "Flooring", "Painting", "Carpentry", "Small/Medium Remodels"]
     },
     {
       "title": "Exterior Work",
       "icon": "",
-      "description": "From design to development to operations, we execute with precision. Every task has purpose, and every deliverable supports your long‑term vision."
+      "image": "/assets/images/exterior.jpg",
+      "id": "exterior",
+      "description": "Your home’s exterior faces the elements every day — we keep it strong and looking great. From building or repairing decks and fences to maintaining siding and exterior trim, we deliver durable work that boosts curb appeal and protects your investment.",
+      "focus": ["Decks", "Fences", "Siding", "Exterior Carpentry"]
+    
     },
     {
       "title": "Repair/Maintenance",
       "icon": "",
-      "description": "We track meaningful metrics, refine your systems, and help you build momentum. Small improvements compound into measurable business growth."
+      "image": "/assets/images/repair.jpg",
+      "id": "repair",
+      "description": "When something breaks, sticks, leaks, or just needs attention, we’re your go‑to team. Our repair services cover the everyday issues homeowners run into, plus minor electrical and general handyman tasks.",
+      "focus": ["General Repairs", "Maintenance Tasks", "Minor Electrical", "Emergency Services"]
     }
   ],
   "training_packages": [

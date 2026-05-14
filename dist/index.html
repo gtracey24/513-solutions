@@ -16,12 +16,15 @@
 
 <!-- CSS -->
  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="css/components.css" />
 <link rel="stylesheet" href="css/presets/friendly-startup.css?v=3" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <body class="theme-friendly">
 
@@ -118,42 +121,90 @@
   <h2 class="mb-4"></h2>
   <div class="row">
     <div class="col-md-6 mb-5">
-  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient"
-       style="min-height: 480px"; cursor="pointer"; data-bs-toggle="collapse" data-bs-target= "#description";>
+  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient service-card"
+       style="min-height: 480px; cursor: pointer;"
+       data-bg="/assets/images/interior.jpg"
+       data-bs-toggle="collapse"
+       data-bs-target="#description-interior">
+
     <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
+
       <h2 class="card-title mb-4" style="font-size: 2.2rem;">
         Interior Work
       </h2>
-      <p class="card-text" style="font-size: 1.35rem; line-height: 1.7;" id="description" class="collapse card-text">
-        We create tailored strategies built around your business goals. Clear steps, realistic timelines, and a roadmap that keeps your team aligned and moving forward.
-      </p>
-    </div>
-  </div>
-</div><div class="col-md-6 mb-5">
-  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient"
-       style="min-height: 480px"; cursor="pointer"; data-bs-toggle="collapse" data-bs-target= "#description";>
-    <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
-      <h2 class="card-title mb-4" style="font-size: 2.2rem;">
-        Exterior Work
-      </h2>
-      <p class="card-text" style="font-size: 1.35rem; line-height: 1.7;" id="description" class="collapse card-text">
-        From design to development to operations, we execute with precision. Every task has purpose, and every deliverable supports your long‑term vision.
-      </p>
-    </div>
-  </div>
-</div><div class="col-md-6 mb-5">
-  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient"
-       style="min-height: 480px"; cursor="pointer"; data-bs-toggle="collapse" data-bs-target= "#description";>
-    <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
-      <h2 class="card-title mb-4" style="font-size: 2.2rem;">
-        Repair/Maintenance
-      </h2>
-      <p class="card-text" style="font-size: 1.35rem; line-height: 1.7;" id="description" class="collapse card-text">
-        We track meaningful metrics, refine your systems, and help you build momentum. Small improvements compound into measurable business growth.
-      </p>
+
+      <div class="collapse card-text text-start"
+           id="description-interior"
+           style="font-size: 1.35rem; line-height: 1.7;">
+
+        <p>From cosmetic updates to functional improvements, we handle the projects that make your home feel polished and comfortable. Whether it’s repairing damaged drywall, installing new flooring, or refreshing a room with paint, we bring craftsmanship and attention to detail to every interior space.</p>
+
+        <ul>
+          <li>Drywall</li><li>Flooring</li><li>Painting</li><li>Carpentry</li><li>Small/Medium Remodels</li>
+        </ul>
+
+      </div>
+
     </div>
   </div>
 </div>
+<div class="col-md-6 mb-5">
+  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient service-card"
+       style="min-height: 480px; cursor: pointer;"
+       data-bg="/assets/images/exterior.jpg"
+       data-bs-toggle="collapse"
+       data-bs-target="#description-exterior">
+
+    <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
+
+      <h2 class="card-title mb-4" style="font-size: 2.2rem;">
+        Exterior Work
+      </h2>
+
+      <div class="collapse card-text text-start"
+           id="description-exterior"
+           style="font-size: 1.35rem; line-height: 1.7;">
+
+        <p>Your home’s exterior faces the elements every day — we keep it strong and looking great. From building or repairing decks and fences to maintaining siding and exterior trim, we deliver durable work that boosts curb appeal and protects your investment.</p>
+
+        <ul>
+          <li>Decks</li><li>Fences</li><li>Siding</li><li>Exterior Carpentry</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="col-md-6 mb-5">
+  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient service-card"
+       style="min-height: 480px; cursor: pointer;"
+       data-bg="/assets/images/repair.jpg"
+       data-bs-toggle="collapse"
+       data-bs-target="#description-repair">
+
+    <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
+
+      <h2 class="card-title mb-4" style="font-size: 2.2rem;">
+        Repair/Maintenance
+      </h2>
+
+      <div class="collapse card-text text-start"
+           id="description-repair"
+           style="font-size: 1.35rem; line-height: 1.7;">
+
+        <p>When something breaks, sticks, leaks, or just needs attention, we’re your go‑to team. Our repair services cover the everyday issues homeowners run into, plus minor electrical and general handyman tasks.</p>
+
+        <ul>
+          <li>General Repairs</li><li>Maintenance Tasks</li><li>Minor Electrical</li><li>Emergency Services</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
@@ -422,6 +473,60 @@
   </div>
 </footer>
  -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Close all open collapses when clicking outside any card
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.service-card')) {
+      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
+        let collapse = bootstrap.Collapse.getInstance(openItem);
+        if (collapse) collapse.hide();
+      });
+    }
+  });
+
+  // Close other cards when opening a new one
+  document.querySelectorAll('.service-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      const target = card.getAttribute('data-bs-target');
+
+      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
+        if ('#' + openItem.id !== target) {
+          let collapse = bootstrap.Collapse.getInstance(openItem);
+          if (collapse) collapse.hide();
+        }
+      });
+    });
+  });
+
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelectorAll('.service-card').forEach(card => {
+    const collapseId = card.getAttribute('data-bs-target');
+    const collapseEl = document.querySelector(collapseId);
+    const bg = card.getAttribute('data-bg');
+
+    collapseEl.addEventListener('show.bs.collapse', () => {
+      card.style.backgroundImage = `url('${bg}')`;
+      card.classList.add('bg-active');
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', () => {
+      card.style.backgroundImage = '';
+      card.classList.remove('bg-active');
+    });
+  });
+
+});
+</script>
+
+
 
 </body>
+
 </html>

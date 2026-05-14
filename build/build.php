@@ -121,9 +121,19 @@ $serviceTemplate = file_get_contents(
 
 if (!empty($config['services'])) {
   foreach ($config['services'] as $service) {
+
+    // Build focus list for THIS service
+    $focusHtml = '';
+    if (!empty($service['focus'])) {
+      foreach ($service['focus'] as $focusItem) {
+        $focusHtml .= "<li>{$focusItem}</li>";
+      }
+    }
+
+    // Replace tokens
     $servicesHtml .= str_replace(
-      ['{{SERVICE_TITLE}}', '{{SERVICE_DESCRIPTION}}', '{{SERVICE_ICON}}', '{{SERVICE_GRADIENT'],
-      [$service['title'], $service['description'], $service['icon'], $service['gradient']],
+      ['{{SERVICE_TITLE}}', '{{SERVICE_DESCRIPTION}}', '{{SERVICE_ICON}}', '{{SERVICE_GRADIENT}}', '{{SERVICE_ID}}', '{{SERVICE_FOCUS}}', '{{SERVICE_IMAGE}}'],
+      [$service['title'], $service['description'], $service['icon'], $service['gradient'], $service['id'], $focusHtml, $service['image'] ?? ''],
       $serviceTemplate
     );
   }

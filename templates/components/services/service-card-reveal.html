@@ -1,13 +1,28 @@
 <div class="col-md-6 mb-5">
-  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient"
-       style="min-height: 480px"; cursor="pointer"; data-bs-toggle="collapse" data-bs-target= "#description";>
+  <div class="card h-100 text-center p-4 shadow-lg service-card-gradient service-card"
+       style="min-height: 480px; cursor: pointer;"
+       data-bg="{{SERVICE_IMAGE}}"
+       data-bs-toggle="collapse"
+       data-bs-target="#description-{{SERVICE_ID}}">
+
     <div class="card-body d-flex flex-column justify-content-center px-3 py-4">
+
       <h2 class="card-title mb-4" style="font-size: 2.2rem;">
         {{SERVICE_TITLE}}
       </h2>
-      <p class="card-text" style="font-size: 1.35rem; line-height: 1.7;" id="description" class="collapse card-text">
-        {{SERVICE_DESCRIPTION}}
-      </p>
+
+      <div class="collapse card-text text-start"
+           id="description-{{SERVICE_ID}}"
+           style="font-size: 1.35rem; line-height: 1.7;">
+
+        <p>{{SERVICE_DESCRIPTION}}</p>
+
+        <ul>
+          {{SERVICE_FOCUS}}
+        </ul>
+
+      </div>
+
     </div>
   </div>
 </div>
