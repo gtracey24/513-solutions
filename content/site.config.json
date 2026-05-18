@@ -5,14 +5,14 @@
   },
   "seo": {
     "title": "513 Solutions — Handyman/Remodeling Services in Edwardsville, IL",
-    "description": "We help businesses grow through strategic services, clear communication, and a modern digital presence.",
-    "canonical": "https://yourbusiness.com/",
+    "description": "For all your handyman and remodeling needs in Edwardsville, IL",
+    "canonical": "https://513solutions.net/",
     "ogImage": "/assets/images/og-image.png"
   },
   "design": {
     "theme": "friendly",
     "stylesheet": "friendly-startup.css",
-    "heroVariant": "centered",
+    "heroVariant": "split",
     "aboutVariant": "about-left-image",
     "serviceStyle": "service-card-reveal",
     "processStyle": "default",
@@ -21,8 +21,8 @@
     "formVariant": "form-email"
   },
   "hero": {
-    "headline": "Build with confidence.</br>Grow with clarity.",
-    "subheadline": "Professional services that simplify your workflow and elevate your brand",
+    "headline": "For all your handyman</br>and remodeling needs.",
+    "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
     "image": "/assets/images/hero-image.png",
     "cta": {
       "label": "Get Started",
@@ -126,7 +126,7 @@
   "about": {
     "headline": "About Our Business",
     "image": "/assets/images/about.jpg",
-    "description": "With years of experience across multiple industries, we help businesses grow through strategic planning, modern design, and reliable execution. Our mission is to provide clarity, confidence, and long‑term support for every client we work with."
+    "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, the focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
   },
   "footer": {
     "text": "© 2026 Your Business. All rights reserved.",

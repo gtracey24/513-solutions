@@ -95,148 +95,33 @@ body.theme-friendly .btn-primary {
 }
 
 /* ------------------------------------------------------------
-   SERVICE CARD — BACKGROUND FADE + TRUE TEXT FADE-IN
+   SIMPLE SERVICE CARD MVP WITH CHEVRON + HIGHLIGHT
 ------------------------------------------------------------ */
 
 .service-card {
-  position: relative;
-  height: 380px;
-  overflow: hidden;
-
-  /* ⭐ INACTIVE BACKGROUND (light gradient so black text is readable) */
-  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border-radius: 20px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-
-  transition:
-    background 0.4s ease,
-    background-image 0.6s ease,
-    background-size 0.6s ease,
-    background-position 0.6s ease,
-    opacity 0.4s ease;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
-/* ------------------------------------------------------------
-   TEXT STARTS INVISIBLE (no grey flash)
------------------------------------------------------------- */
-
-.service-card .card-body,
-.service-card .card-body * {
-  opacity: 0;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  transition:
-    opacity 0.45s ease,
-    color 0.45s ease,
-    -webkit-text-fill-color 0.45s ease;
-
-  position: relative;
-  z-index: 2;
+.service-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
 }
 
-/* ------------------------------------------------------------
-   TITLE MUST BE BLACK WHEN INACTIVE
------------------------------------------------------------- */
-
-.service-card .card-title {
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
+.service-card.open {
+  border: none !important;
 }
 
-/* ------------------------------------------------------------
-   WHEN ACTIVE → TEXT FADES IN + TURNS WHITE
------------------------------------------------------------- */
-
-.service-card.bg-active .card-body,
-.service-card.bg-active .card-body * {
-  opacity: 1;
+.card-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0;
 }
 
-.service-card.bg-active .card-title {
-  opacity: 1;
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
 
-.service-card.bg-active .collapse.show,
-.service-card.bg-active .collapse.show * {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
 
-/* ------------------------------------------------------------
-   GRADIENT OVERLAY
------------------------------------------------------------- */
-
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 1;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.65) 40%,
-    rgba(0,0,0,0.75) 100%
-  );
-
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.service-card.bg-active::after {
-  opacity: 1;
-}
-
-/* Optional hover movement */
-.service-card-gradient:hover {
-  background-position: right center;
-}
-
-/* Optional description overlay */
-.service-bg .bg-overlay {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 1rem;
-  border-radius: 12px;
-  color: #fff;
-}
-
-/* ------------------------------------------------------------
-   FINAL TITLE FIX — NO FLASH, BLACK WHEN INACTIVE, WHITE WHEN ACTIVE
------------------------------------------------------------- */
-
-/* Title starts invisible + transparent */
-.service-card .card-title {
-  opacity: 0;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  transition:
-    opacity 0.45s ease,
-    color 0.45s ease,
-    -webkit-text-fill-color 0.45s ease;
-  position: relative;
-  z-index: 2;
-}
-
-/* INACTIVE STATE → fade to black */
-.service-card:not(.bg-active) .card-title {
-  opacity: 1;
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
-}
-
-/* ACTIVE STATE → fade to white */
-.service-card.bg-active .card-title {
-  opacity: 1;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
