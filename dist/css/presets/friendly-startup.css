@@ -50,12 +50,10 @@ body.theme-friendly .nav-link {
 }
 
 .navbar-brand img {
-  height: 35px;
-  width: auto;
+  height: 48px;       /* adjust to taste */
+  width: auto;        /* keeps proportions */
+  object-fit: contain;
 }
-
-
-
 
 
 /* Buttons */
