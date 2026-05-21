@@ -38,6 +38,10 @@ $pageContent = file_get_contents($root . '/templates/pages/home.html');
  * PHASE 1: SECTION INJECTION (structure)
  * ============================================================ */
 
+/* ============================================================
+ * PHASE 1: SECTION INJECTION (structure)
+ * ============================================================ */
+
 /* HERO */
 $pageContent = str_replace(
   '{{SECTION_HERO}}',
@@ -46,6 +50,28 @@ $pageContent = str_replace(
   ),
   $pageContent
 );
+
+/* HERO IMAGES (multiple rotating images) */
+$heroImagesHtml = '';
+
+if (!empty($config['hero']['images']) && is_array($config['hero']['images'])) {
+  foreach ($config['hero']['images'] as $index => $img) {
+    $active = $index === 0 ? 'active' : '';
+    $heroImagesHtml .= "<img src=\"{$img}\" class=\"rotating-image {$active}\" alt=\"Hero image {$index}\" />";
+  }
+}
+
+$pageContent = str_replace('{{HERO_IMAGES}}', $heroImagesHtml, $pageContent);
+
+/* ABOUT */
+$pageContent = str_replace(
+  '{{SECTION_ABOUT}}',
+  file_get_contents(
+    $root . "/templates/sections/about/{$config['design']['aboutVariant']}.html"
+  ),
+  $pageContent
+);
+
 
 /* ABOUT */
 $pageContent = str_replace(
@@ -390,7 +416,6 @@ $replacements = [
   '{{HERO_VARIANT}}'     => $config['design']['heroVariant'] ?? '',
   '{{HERO_HEADLINE}}'     => $config['hero']['headline'] ?? '',
   '{{HERO_SUBHEADLINE}}'  => $config['hero']['subheadline'] ?? '',
-  '{{HERO_IMAGE}}'        => $config['hero']['image'] ?? '',
   '{{HERO_CTA_LABEL}}'    => $config['hero']['cta']['label'] ?? '',
   '{{HERO_CTA_URL}}'      => $config['hero']['cta']['url'] ?? '',
 

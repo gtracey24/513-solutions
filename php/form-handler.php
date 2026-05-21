@@ -51,7 +51,7 @@ file_put_contents(__DIR__ . "/form-log.txt", $log, FILE_APPEND);
 
 
 // Where the email goes
-$recipient = "jpeal@bethalto.org";
+$recipient = "jbakley@513solutions.net";
 
 $subject = "New Contact Form Submission";
 $body = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message\n";

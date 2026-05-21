@@ -12,7 +12,7 @@
   "design": {
     "theme": "friendly",
     "stylesheet": "friendly-startup.css",
-    "heroVariant": "split",
+    "heroVariant": "split-gallery",
     "aboutVariant": "about-left-image",
     "serviceStyle": "service-card-reveal",
     "processStyle": "default",
@@ -20,15 +20,20 @@
     "testimonialVariant": "testimonials-carousel",
     "formVariant": "form-email"
   },
-  "hero": {
-    "headline": "For all your handyman</br>and remodeling needs.",
-    "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
-    "image": "/assets/images/hero-image.png",
-    "cta": {
-      "label": "Get Started",
-      "url": "#contact"
-    }
-  },
+"hero": {
+  "headline": "For all your handyman</br>and remodeling needs.",
+  "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
+  "images": [
+    "/assets/images/hero-image-1.jpg",
+    "/assets/images/hero-image-2.jpg",
+    "/assets/images/hero-image-3.jpg",
+    "/assets/images/hero-image-4.jpg"
+  ],
+  "cta": {
+    "label": "Get Started",
+    "url": "#contact"
+  }
+},
   "cta": {
     "headline": "Your success is our priority from start to finish.",
     "button": {},
@@ -126,7 +131,7 @@
   "about": {
     "headline": "About Our Business",
     "image": "/assets/images/about.jpg",
-    "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, the focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
+    "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, our focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
   },
   "footer": {
     "text": "© 2026 Your Business. All rights reserved.",
@@ -207,9 +212,10 @@
       }
     ]
   },
-    "form": {
-    "headline": "Get in Touch",
-    "description": "Have questions or ready to start your training journey? Send me a message and I’ll get back to you as soon as possible.",
-    "buttonLabel": "Send Message"
-  }
+"form": {
+  "headline": "Request a Quote",
+  "description": "Have a project in mind or need help with repairs? Send us a message with the details and we’ll get back to you as soon as possible with next steps.",
+  "buttonLabel": "Send Message"
+}
+
 }

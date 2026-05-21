@@ -94,6 +94,38 @@ body.theme-friendly .btn-primary {
   animation: heroFloatIn 1s ease-out forwards;
 }
 
+/* ---HERO--- */
+.hero-image-rotator {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Reasonable hero image height */
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.hero-image-rotator .rotating-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures consistent cropping */
+  object-position: center; /* Keeps subject centered */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-image-rotator .rotating-image.active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-image-rotator {
+    height: 220px;
+  }
+}
+
+
 /* ------------------------------------------------------------
    SIMPLE SERVICE CARD MVP WITH CHEVRON + HIGHLIGHT
 ------------------------------------------------------------ */
@@ -122,6 +154,7 @@ body.theme-friendly .btn-primary {
   font-weight: 700;
   margin: 0;
 }
+
 
 
 

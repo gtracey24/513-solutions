@@ -70,8 +70,9 @@
 
 <main id="content" class="px-3 px-md-0">
     <!-- HERO -->
-<header class="hero-split container py-5">
+<header class="hero-split-gallery container py-5">
   <div class="row align-items-center">
+
     <div class="col-md-6">
       <h1>For all your handyman</br>and remodeling needs.</h1>
       <p class="lead">Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.</p>
@@ -81,8 +82,11 @@
     </div>
 
     <div class="col-md-6">
-      <img src="/assets/images/hero-image.png" alt="" class="img-fluid" loading="eager" />
+      <div class="hero-image-rotator">
+        <img src="/assets/images/hero-image-1.jpg" class="rotating-image active" alt="Hero image 0" /><img src="/assets/images/hero-image-2.jpg" class="rotating-image " alt="Hero image 1" /><img src="/assets/images/hero-image-3.jpg" class="rotating-image " alt="Hero image 2" /><img src="/assets/images/hero-image-4.jpg" class="rotating-image " alt="Hero image 3" />
+      </div>
     </div>
+
   </div>
 </header>
 
@@ -106,7 +110,7 @@
       <!-- DESCRIPTION COLUMN -->
       <div class="col-lg-8">
         <p class="lead" style="overflow-wrap: break-word; word-break: break-word;">
-          513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, the focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last.
+          513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, our focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last.
         </p>
       </div>
 
@@ -400,10 +404,10 @@
   <div class="container">
     <div class="sf-card mx-auto p-4 shadow-sm border rounded bg-white" style="max-width: 520px;">
 
-      <h2 class="sf-card-title text-center mb-3">Get in Touch</h2>
+      <h2 class="sf-card-title text-center mb-3">Request a Quote</h2>
 
       <p class="sf-card-text text-center text-muted mb-4">
-        Have questions or ready to start your training journey? Send me a message and I’ll get back to you as soon as possible.
+        Have a project in mind or need help with repairs? Send us a message with the details and we’ll get back to you as soon as possible with next steps.
       </p>
 
       <form id="contact-form">
@@ -524,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+<script src="/js/hero-rotator.js"></script>
 
 
 
