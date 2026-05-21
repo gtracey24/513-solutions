@@ -49,6 +49,15 @@ body.theme-friendly .nav-link {
   font-size: 1.15rem;
 }
 
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+
+
+
+
+
 /* Buttons */
 body.theme-friendly .btn,
 body.theme-friendly .btn-primary {
