@@ -15,14 +15,28 @@
 <meta property="og:url" content="https://513solutions.net/" />
 
 <!-- CSS -->
- <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+<!-- Bootstrap Core -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/components.css" />
-<link rel="stylesheet" href="css/presets/friendly-startup.css?v=3" />
+
+<!-- YOUR CSS (Correct Order) -->
+<link rel="stylesheet" href="css/base.css" />        <!-- global variables FIRST -->
+<link rel="stylesheet" href="css/main.css" />        <!-- layout + sections -->
+<link rel="stylesheet" href="css/components.css" />  <!-- cards, buttons, etc -->
+<link rel="stylesheet" href="css/presets/friendly-startup.css?v=3" /> <!-- theme overrides -->
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -73,133 +87,198 @@
 
 <main id="content" class="px-3 px-md-0">
     <!-- HERO START-->
-<header class="hero-split-gallery container py-5">
-  <div class="row align-items-center">
+<section id="hero" class="section hero-split-gallery py-5">
+  <div class="container">
+    <div class="row align-items-center">
 
-    <div class="col-md-6">
-      <h1>For all your handyman</br>and remodeling needs.</h1>
-      <p class="lead">Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.</p>
-      <a href="#contact" class="btn btn-primary">
-        Get Started
-      </a>
-    </div>
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <h1>For all your handyman</br>and remodeling needs.</h1>
+        <p class="lead">Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.</p>
 
-    <div class="col-md-6">
-      <div class="hero-image-rotator">
-        <img src="/assets/images/hero-image-1.jpg" class="rotating-image active" alt="Hero image 0" /><img src="/assets/images/hero-image-2.jpg" class="rotating-image " alt="Hero image 1" /><img src="/assets/images/hero-image-3.jpg" class="rotating-image " alt="Hero image 2" /><img src="/assets/images/hero-image-4.jpg" class="rotating-image " alt="Hero image 3" />
+        <a href="#contact" class="btn btn-primary">
+          Get Started
+        </a>
       </div>
-    </div>
 
+      <!-- Rotating Image Column -->
+      <div class="col-md-6">
+        <div class="hero-image-rotator">
+          <img src="/assets/images/hero-image-1.jpg" class="rotating-image active" alt="Hero image 0" /><img src="/assets/images/hero-image-2.jpg" class="rotating-image " alt="Hero image 1" /><img src="/assets/images/hero-image-3.jpg" class="rotating-image " alt="Hero image 2" /><img src="/assets/images/hero-image-4.jpg" class="rotating-image " alt="Hero image 3" />
+        </div>
+      </div>
+
+    </div>
   </div>
-</header>
+</section>
 
 <!-- HERO END -->
 
 <!-- SERVICES_START -->
-<section id="services" class="container py-5 px-5 fade-scroll" style="background-color: brown; color: antiquewhite;">
-  <h2 class="section-title mb-4 text-center" >
-      Our Services
-    </h2>
-  <div class="row">
-    <div class="col-md-6 mb-4">
-  <div class="card h-100 p-4 shadow-sm service-card" style="color:antiquewhite;">
-    
+<section id="services" class="section py-5 px-5 fade-scroll">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/handyman.jpg'); border-radius: 0">
 
-    <button class="btn w-100 d-flex justify-content-between align-items-center service-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#description-interior">
+    <div class="service-bg"></div>
 
-      <h2 class="card-title mb-0" style="font-size: 1.9rem;">
-        Interior Work
-      </h2>
+    <div class="service-content text-center">
+      <i data-lucide="wrench" class="mb-3" style="width: 48px; height: 48px;"></i>
 
-      <span class="chevron">
-        <i class="bi bi-chevron-down"></i>
-      </span>
+      <h3 class="mb-2">Handyman</h3>
 
-    </button>
-
-    <div class="collapse mt-3" id="description-interior">
-      <p>From cosmetic updates to functional improvements, we handle the projects that make your home feel polished and comfortable. Whether it’s repairing damaged drywall, installing new flooring, or refreshing a room with paint, we bring craftsmanship and attention to detail to every interior space.</p>
-
-      <ul>
-        <li>Drywall</li><li>Flooring</li><li>Painting</li><li>Carpentry</li><li>Small/Medium Remodels</li>
-      </ul>
+      <p class="mb-0">Quick fixes and small projects handled with reliable, no‑nonsense craftsmanship.</p>
     </div>
 
   </div>
 </div>
-<div class="col-md-6 mb-4">
-  <div class="card h-100 p-4 shadow-sm service-card" style="color:antiquewhite;">
-    
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/remodel.jpg'); border-radius: 0">
 
-    <button class="btn w-100 d-flex justify-content-between align-items-center service-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#description-exterior">
+    <div class="service-bg"></div>
 
-      <h2 class="card-title mb-0" style="font-size: 1.9rem;">
-        Exterior Work
-      </h2>
+    <div class="service-content text-center">
+      <i data-lucide="home" class="mb-3" style="width: 48px; height: 48px;"></i>
 
-      <span class="chevron">
-        <i class="bi bi-chevron-down"></i>
-      </span>
+      <h3 class="mb-2">Small/Medium Remodels</h3>
 
-    </button>
-
-    <div class="collapse mt-3" id="description-exterior">
-      <p>Your home’s exterior faces the elements every day — we keep it strong and looking great. From building or repairing decks and fences to maintaining siding and exterior trim, we deliver durable work that boosts curb appeal and protects your investment.</p>
-
-      <ul>
-        <li>Decks</li><li>Fences</li><li>Siding</li><li>Exterior Carpentry</li>
-      </ul>
+      <p class="mb-0">Practical upgrades and clean remodel work that improve how your space looks and functions.</p>
     </div>
 
   </div>
 </div>
-<div class="col-md-6 mb-4">
-  <div class="card h-100 p-4 shadow-sm service-card" style="color:antiquewhite;">
-    
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/drywall.jpg'); border-radius: 0">
 
-    <button class="btn w-100 d-flex justify-content-between align-items-center service-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#description-repair">
+    <div class="service-bg"></div>
 
-      <h2 class="card-title mb-0" style="font-size: 1.9rem;">
-        Repair/Maintenance
-      </h2>
+    <div class="service-content text-center">
+      <i data-lucide="slice" class="mb-3" style="width: 48px; height: 48px;"></i>
 
-      <span class="chevron">
-        <i class="bi bi-chevron-down"></i>
-      </span>
+      <h3 class="mb-2">Drywall</h3>
 
-    </button>
+      <p class="mb-0">Smooth installs and seamless repairs that blend perfectly into your home.</p>
+    </div>
 
-    <div class="collapse mt-3" id="description-repair">
-      <p>When something breaks, sticks, leaks, or just needs attention, we’re your go‑to team. Our repair services cover the everyday issues homeowners run into, plus minor electrical and general handyman tasks.</p>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/decking.jpg'); border-radius: 0">
 
-      <ul>
-        <li>General Repairs</li><li>Maintenance Tasks</li><li>Minor Electrical</li><li>Emergency Services</li>
-      </ul>
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="drill" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Decking</h3>
+
+      <p class="mb-0">Durable, well‑built decks designed to handle weather and everyday use.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/fencing.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="fence" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Fencing</h3>
+
+      <p class="mb-0">Wood and composite fencing that adds privacy, security, and curb appeal.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/flooring.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="chart-no-axes-gantt" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Flooring</h3>
+
+      <p class="mb-0">Clean, durable flooring installs that refresh and modernize your home.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/painting.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="paintbrush" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Painting</h3>
+
+      <p class="mb-0">Crisp interior and exterior painting that brings new life to your space.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/electrical.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="zap" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Electrical</h3>
+
+      <p class="mb-0">Safe, reliable minor electrical work for fixtures, outlets, and small upgrades.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/siding.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="warehouse" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Siding</h3>
+
+      <p class="mb-0">Repairs and updates that keep your home protected and looking sharp.</p>
+    </div>
+
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="service-block" style="--service-img: url('/assets/images/carpentry.jpg'); border-radius: 0">
+
+    <div class="service-bg"></div>
+
+    <div class="service-content text-center">
+      <i data-lucide="hammer" class="mb-3" style="width: 48px; height: 48px;"></i>
+
+      <h3 class="mb-2">Carpentry</h3>
+
+      <p class="mb-0">Custom woodwork and repairs that add strength, detail, and character.</p>
     </div>
 
   </div>
 </div>
 
+    </div>
   </div>
 </section>
 
 <!-- SERVICES_END -->
 
 <!-- GALLERY START -->
-<div class="section-spacer"></div>
-<section class="py-5 bg-light">
-  
+<section class="section py-5">
   <div class="container-fluid px-0 fade-scroll">
-
     <div class="gallery-strip d-flex flex-wrap justify-content-center">
       <div class="gallery-strip-item gallery-tilt-in p-3">
   <img 
@@ -223,10 +302,11 @@
     </div>
   </div>
 </section>
+
 <!-- GALLERY END -->
 
 <!-- TESTIMONIALS START -->
-<section class="py-5 px-5 fade-in">
+<section class="section py-5 px-5 fade-in">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">What Clients Are Saying</h2>
     <style>
@@ -365,9 +445,9 @@
 <!-- ABOUT END -->
 
 <!-- FORM START -->
-<section id="contact" class="sf-card-wrapper my-6 p-5" style="background-color: blue;">
+<section id="contact" class="section sf-card-wrapper my-6 p-5">
   <div class="container">
-    <div class="sf-card mx-auto p-4 shadow-sm border rounded bg-white" style="max-width: 520px;">
+    <div class="sf-card mx-auto p-4 shadow-sm border rounded" style="max-width: 520px;">
 
       <h2 class="sf-card-title text-center mb-3">Request a Quote</h2>
 
@@ -495,7 +575,14 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/hero-rotator.js"></script>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 
+
+
+<i data-lucide="hammer"></i>
 
 </body>
 

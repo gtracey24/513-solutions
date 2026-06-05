@@ -1,37 +1,23 @@
 /* ------------------------------------------------------------
-   FRIENDLY STARTUP — Premium Gradient Edition (Updated Typography)
+   FRIENDLY THEME — Typography + Spacing Only
+   (NO COLOR OVERRIDES)
 ------------------------------------------------------------ */
 
 body.theme-friendly {
-  --bs-primary: #6366f1;
-  --bs-primary-rgb: 99, 102, 241;
-
-  --bs-body-color: #1f2937;
-  --bs-border-radius: 0.75rem;
+  /* Typography */
   --bs-body-font-family: 'Merriweather', serif;
-
   font-size: 1.125rem;
   line-height: 1.65;
+
+  /* Rounded UI */
+  --bs-border-radius: 0.75rem;
 }
 
 /* Headings */
-body.theme-friendly h1 {
-  font-size: 2.75rem;
-  line-height: 1.2;
-}
-
-body.theme-friendly h2 {
-  font-size: 2.25rem;
-  line-height: 1.25;
-}
-
-body.theme-friendly h3 {
-  font-size: 1.75rem;
-}
-
-body.theme-friendly h4 {
-  font-size: 1.35rem;
-}
+body.theme-friendly h1 { font-size: 2.75rem; line-height: 1.2; }
+body.theme-friendly h2 { font-size: 2.25rem; line-height: 1.25; }
+body.theme-friendly h3 { font-size: 1.75rem; }
+body.theme-friendly h4 { font-size: 1.35rem; }
 
 /* Lead text */
 body.theme-friendly .lead {
@@ -39,9 +25,9 @@ body.theme-friendly .lead {
   line-height: 1.7;
 }
 
-/* Navigation */
+/* Navigation (keeps white surface, no color override) */
 body.theme-friendly .navbar {
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
@@ -50,11 +36,10 @@ body.theme-friendly .nav-link {
 }
 
 .navbar-brand img {
-  height: 48px;       /* adjust to taste */
-  width: auto;        /* keeps proportions */
+  height: 48px;
+  width: auto;
   object-fit: contain;
 }
-
 
 /* Buttons */
 body.theme-friendly .btn,
@@ -63,21 +48,20 @@ body.theme-friendly .btn-primary {
 }
 
 body.theme-friendly .btn-primary {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.25);
 }
 
-/* Fade-in animation */
+body.theme-friendly .btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-scroll {
@@ -87,37 +71,32 @@ body.theme-friendly .btn-primary {
 }
 
 @keyframes heroFloatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .hero-animate {
   animation: heroFloatIn 1s ease-out forwards;
 }
 
-/* ---HERO--- */
+/* ------------------------------------------------------------
+   HERO IMAGE ROTATOR
+------------------------------------------------------------ */
 .hero-image-rotator {
   position: relative;
   width: 100%;
-  height: 70vh; /* Reasonable hero image height */
+  height: 70vh;
   max-height: 700px;
   overflow: hidden;
 }
 
 .hero-image-rotator .rotating-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures consistent cropping */
-  object-position: center; /* Keeps subject centered */
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -127,16 +106,12 @@ body.theme-friendly .btn-primary {
 }
 
 @media (max-width: 768px) {
-  .hero-image-rotator {
-    height: 220px;
-  }
+  .hero-image-rotator { height: 220px; }
 }
 
-
 /* ------------------------------------------------------------
-   SIMPLE SERVICE CARD MVP WITH CHEVRON + HIGHLIGHT
+   SERVICE CARD — Friendly Mode
 ------------------------------------------------------------ */
-
 .service-card {
   background: none !important;
   border: none !important;
@@ -152,16 +127,10 @@ body.theme-friendly .btn-primary {
   text-align: left;
 }
 
-.service-card.open {
-  border: none !important;
-}
+.service-card.open { border: none !important; }
 
 .card-title {
   font-size: 1.9rem;
   font-weight: 700;
   margin: 0;
 }
-
-
-
-
