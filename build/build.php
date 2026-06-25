@@ -38,10 +38,6 @@ $pageContent = file_get_contents($root . '/templates/pages/home.html');
  * PHASE 1: SECTION INJECTION (structure)
  * ============================================================ */
 
-/* ============================================================
- * PHASE 1: SECTION INJECTION (structure)
- * ============================================================ */
-
 /* HERO */
 $pageContent = str_replace(
   '{{SECTION_HERO}}',
@@ -62,16 +58,6 @@ if (!empty($config['hero']['images']) && is_array($config['hero']['images'])) {
 }
 
 $pageContent = str_replace('{{HERO_IMAGES}}', $heroImagesHtml, $pageContent);
-
-/* ABOUT */
-$pageContent = str_replace(
-  '{{SECTION_ABOUT}}',
-  file_get_contents(
-    $root . "/templates/sections/about/{$config['design']['aboutVariant']}.html"
-  ),
-  $pageContent
-);
-
 
 /* ABOUT */
 $pageContent = str_replace(
@@ -119,6 +105,13 @@ $pageContent = str_replace(
   $pageContent
 );
 
+/* ⭐ NEW: REVIEWS SECTION ⭐ */
+$pageContent = str_replace(
+  '{{SECTION_REVIEWS}}',
+  file_get_contents($root . '/templates/sections/reviews.html'),
+  $pageContent
+);
+
 /* FORM */
 $pageContent = str_replace(
   '{{SECTION_FORM}}',
@@ -148,7 +141,6 @@ $serviceTemplate = file_get_contents(
 if (!empty($config['services'])) {
   foreach ($config['services'] as $service) {
 
-    // Build focus list for THIS service
     $focusHtml = '';
     if (!empty($service['focus'])) {
       foreach ($service['focus'] as $focusItem) {
@@ -156,7 +148,6 @@ if (!empty($config['services'])) {
       }
     }
 
-    // Replace tokens
     $servicesHtml .= str_replace(
       ['{{SERVICE_TITLE}}', '{{SERVICE_DESCRIPTION}}', '{{SERVICE_ICON}}', '{{SERVICE_GRADIENT}}', '{{SERVICE_ID}}', '{{SERVICE_FOCUS}}', '{{SERVICE_IMAGE}}'],
       [$service['title'], $service['description'], $service['icon'], $service['gradient'], $service['id'], $focusHtml, $service['image'] ?? ''],
@@ -180,7 +171,6 @@ $processTemplate = file_get_contents(
 if (!empty($config['training_packages'])) {
   foreach ($config['training_packages'] as $step) {
 
-    // Convert focus array into a bullet list or comma-separated string
     $focusList = '';
     if (!empty($step['focus']) && is_array($step['focus'])) {
       $focusList = implode(', ', $step['focus']);
@@ -216,13 +206,12 @@ $pageContent = str_replace(
   $pageContent
 );
 
-
-
 /* GALLERY ITEMS */
 $galleryHtml = '';
 $galleryItemTemplate = file_get_contents(
   $root . "/templates/components/gallery/{$config['design']['galleryStyle']}.html"
 );
+
 if (!empty($config['gallery'])) {
   foreach ($config['gallery'] as $item) {
     $galleryHtml .= str_replace(
@@ -278,14 +267,41 @@ $pageContent = str_replace(
   $pageContent
 );
 
+/* ⭐ NEW: REVIEW SUMMARY COMPONENT ⭐ */
+$reviewHtml = file_get_contents(
+  $root . "/templates/components/reviews/review-summary.html"
+);
 
+if (!empty($config['reviews'])) {
+  $reviewHtml = str_replace(
+    [
+      '{{REVIEWS_AVERAGE}}',
+      '{{REVIEWS_TOTAL}}',
+      '{{REVIEWS_GOOGLE}}',
+      '{{REVIEWS_FACEBOOK}}',
+      '{{REVIEWS_CTA_LABEL}}',
+      '{{REVIEWS_CTA_LINK}}'
+    ],
+    [
+      $config['reviews']['averageRating'] ?? '',
+      ($config['reviews']['googleCount'] + $config['reviews']['facebookCount']),
+      $config['reviews']['googleCount'] ?? '',
+      $config['reviews']['facebookCount'] ?? '',
+      $config['reviews']['ctaLabel'] ?? '',
+      $config['reviews']['ctaLink'] ?? ''
+    ],
+    $reviewHtml
+  );
+}
 
+$pageContent = str_replace('{{REVIEWS_SUMMARY}}', $reviewHtml, $pageContent);
 
 /* FAQ ITEMS */
 $faqHtml = '';
 $faqItemTemplate = file_get_contents(
   $root . "/templates/components/faq/faq-item.html"
 );
+
 if (!empty($config['faq'])) {
   foreach ($config['faq'] as $item) {
     $faqHtml .= str_replace(
@@ -295,6 +311,7 @@ if (!empty($config['faq'])) {
     );
   }
 }
+
 $pageContent = str_replace(
   '{{FAQ_ITEMS}}',
   $faqHtml,
@@ -325,14 +342,12 @@ $html = str_replace(
 /* NAV */
 $navHtml = file_get_contents($root . '/templates/partials/nav.html');
 
-/* Replace NAV_NAME */
 $navHtml = str_replace(
   '{{NAV_NAME}}',
   $config['site']['name'] ?? '',
   $navHtml
 );
 
-/* Build NAV ITEMS */
 $navItemsHtml = '';
 $navItemTemplate = file_get_contents($root . '/templates/components/nav-item.html');
 
@@ -346,28 +361,19 @@ if (!empty($config['navigation'])) {
   }
 }
 
-/* Inject NAV ITEMS */
 $navHtml = str_replace('{{NAV_ITEMS}}', $navItemsHtml, $navHtml);
 
-/* Insert into layout */
 $html = str_replace('{{PARTIAL_NAV}}', $navHtml, $html);
 
-
 /* FOOTER */
-
-/* ------------------------------------------------------------
- * Build footer content
- * ------------------------------------------------------------ */
 $footerHtml = file_get_contents($root . '/templates/partials/footer.html');
 
-/* Footer text */
 $footerHtml = str_replace(
   '{{FOOTER_TEXT}}',
   $config['footer']['text'] ?? '',
   $footerHtml
 );
 
-/* Footer links */
 $footerLinksHtml = '';
 $footerLinkTemplate = file_get_contents(
   $root . '/templates/components/footer-link.html'
@@ -389,62 +395,62 @@ $footerHtml = str_replace(
   $footerHtml
 );
 
-/* Inject footer */
 $html = str_replace('{{PARTIAL_FOOTER}}', $footerHtml, $html);
-
 
 /* ============================================================
  * PHASE 5: CONTENT TOKEN REPLACEMENT
  * ============================================================ */
 
 $replacements = [
-  // Site
+
   '{{SITE_NAME}}' => $config['site']['name'] ?? '',
-  '{{SITE_LANGUAGE}}'     => $config['site']['language'] ?? 'en',
+  '{{SITE_LANGUAGE}}' => $config['site']['language'] ?? 'en',
 
-  // SEO
-  '{{SEO_TITLE}}'         => $config['seo']['title'] ?? '',
-  '{{SEO_DESCRIPTION}}'   => $config['seo']['description'] ?? '',
-  '{{SEO_CANONICAL}}'     => $config['seo']['canonical'] ?? '',
-  '{{SEO_OG_IMAGE}}'      => $config['seo']['ogImage'] ?? '',
+  '{{SEO_TITLE}}' => $config['seo']['title'] ?? '',
+  '{{SEO_DESCRIPTION}}' => $config['seo']['description'] ?? '',
+  '{{SEO_CANONICAL}}' => $config['seo']['canonical'] ?? '',
+  '{{SEO_OG_IMAGE}}' => $config['seo']['ogImage'] ?? '',
 
-  // Design
-  '{{STYLESHEET}}'        => $config['design']['stylesheet'] ?? 'main.css',
+  '{{STYLESHEET}}' => $config['design']['stylesheet'] ?? 'main.css',
   '{{THEME_CLASS}}' => 'theme-' . ($config['design']['theme'] ?? 'modern'),
 
-  // Hero
-  '{{HERO_VARIANT}}'     => $config['design']['heroVariant'] ?? '',
-  '{{HERO_HEADLINE}}'     => $config['hero']['headline'] ?? '',
-  '{{HERO_SUBHEADLINE}}'  => $config['hero']['subheadline'] ?? '',
-  '{{HERO_CTA_LABEL}}'    => $config['hero']['cta']['label'] ?? '',
-  '{{HERO_CTA_URL}}'      => $config['hero']['cta']['url'] ?? '',
+  '{{HERO_VARIANT}}' => $config['design']['heroVariant'] ?? '',
+  '{{HERO_HEADLINE}}' => $config['hero']['headline'] ?? '',
+  '{{HERO_SUBHEADLINE}}' => $config['hero']['subheadline'] ?? '',
+  '{{HERO_CTA_LABEL}}' => $config['hero']['cta']['label'] ?? '',
+  '{{HERO_CTA_URL}}' => $config['hero']['cta']['url'] ?? '',
 
-  // ABOUT
-  '{{ABOUT_VARIANT}}'    => $config['about']['aboutVariant'] ?? '',
-  '{{ABOUT_HEADLINE}}'    => $config['about']['headline'] ?? '', 
-  '{{ABOUT_DESCRIPTION}}'  => $config['about']['description'] ?? '',
-  '{{ABOUT_IMAGE}}'        => $config['about']['image'] ?? '',
+  '{{ABOUT_VARIANT}}' => $config['about']['aboutVariant'] ?? '',
+  '{{ABOUT_HEADLINE}}' => $config['about']['headline'] ?? '',
+  '{{ABOUT_DESCRIPTION}}' => $config['about']['description'] ?? '',
+  '{{ABOUT_IMAGE}}' => $config['about']['image'] ?? '',
 
-// TESTIMONIALS
-'{{TESTIMONIALS_VARIANT}}' => $config['design']['testimonialVariant'] ?? '',
-'{{TESTIMONIALS_HEADLINE}}' => $config['testimonials']['headline'] ?? '',
+  '{{TESTIMONIALS_VARIANT}}' => $config['design']['testimonialVariant'] ?? '',
+  '{{TESTIMONIALS_HEADLINE}}' => $config['testimonials']['headline'] ?? '',
 
-// FORM
-'{{FORM_HEADLINE}}' => $config['form']['headline'] ?? '',
-'{{FORM_DESCRIPTION}}' => $config['form']['description'] ?? '',
-'{{FORM_ACTION}}' => $config['form']['action'] ?? '',
-'{{FORM_BUTTON_LABEL}}' => $config['form']['buttonLabel'] ?? 'Submit',
+  '{{FORM_HEADLINE}}' => $config['form']['headline'] ?? '',
+  '{{FORM_DESCRIPTION}}' => $config['form']['description'] ?? '',
+  '{{FORM_ACTION}}' => $config['form']['action'] ?? '',
+  '{{FORM_BUTTON_LABEL}}' => $config['form']['buttonLabel'] ?? 'Submit',
 
-// CTA
-  '{{CTA_HEADLINE}}'      => $config['cta']['headline'] ?? '',
-  '{{CTA_BUTTON_LABEL}}'  => $config['cta']['button']['label'] ?? '',
-  '{{CTA_BUTTON_URL}}'    => $config['cta']['button']['url'] ?? '',
-  '{{CTA_IMAGE}}'       => $config['cta']['image'] ?? '',
+  '{{CTA_HEADLINE}}' => $config['cta']['headline'] ?? '',
+  '{{CTA_BUTTON_LABEL}}' => $config['cta']['button']['label'] ?? '',
+  '{{CTA_BUTTON_URL}}' => $config['cta']['button']['url'] ?? '',
+  '{{CTA_IMAGE}}' => $config['cta']['image'] ?? '',
   '{{CTA_DESCRIPTION}}' => $config['cta']['description'] ?? '',
-  '{{CTA_PHONE}}'       => $config['cta']['phone'] ?? '',
-  '{{CTA_EMAIL}}'       => $config['cta']['email'] ?? '',
-  '{{CTA_NAME}}'        => $config['cta']['name'] ?? '',
+  '{{CTA_PHONE}}' => $config['cta']['phone'] ?? '',
+  '{{CTA_EMAIL}}' => $config['cta']['email'] ?? '',
+  '{{CTA_NAME}}' => $config['cta']['name'] ?? '',
+
+  /* ⭐ NEW REVIEW TOKENS ⭐ */
+  '{{REVIEWS_AVERAGE}}' => $config['reviews']['averageRating'] ?? '',
+  '{{REVIEWS_GOOGLE}}' => $config['reviews']['googleCount'] ?? '',
+  '{{REVIEWS_FACEBOOK}}' => $config['reviews']['facebookCount'] ?? '',
+  '{{REVIEWS_TOTAL}}' => ($config['reviews']['googleCount'] + $config['reviews']['facebookCount']) ?? '',
+  '{{REVIEWS_CTA_LABEL}}' => $config['reviews']['ctaLabel'] ?? '',
+  '{{REVIEWS_CTA_LINK}}' => $config['reviews']['ctaLink'] ?? '',
 ];
+
 $html = str_replace(
   array_keys($replacements),
   array_values($replacements),
@@ -486,33 +492,14 @@ function copyDir(string $src, string $dst): void
   }
 }
 
-/* ------------------------------------------------------------
- * Copy Files (bootstrap, main, components, presets, assets, etc.)
- * ------------------------------------------------------------ */
 copyDir($root . '/css', $distPath . '/css');
-
-/* Copy assets */
 copyDir($root . '/assets', $distPath . '/assets');
-
-/* Copy JS */
 copyDir($root . '/js', $distPath . '/js');
-
-/* Copy images (if separate) */
 copyDir($root . '/images', $distPath . '/images');
-
-/* Copy content */
 copyDir($root . '/content', $distPath . '/content');
-
-/* Copy templates (if needed by JS) */
 copyDir($root . '/templates', $distPath . '/templates');
-
-/* Copy PHP (if needed — usually not for static) */
 copyDir($root . '/php', $distPath . '/php');
 
-
-/* ------------------------------------------------------------
- * Ensure selected preset exists
- * ------------------------------------------------------------ */
 $designCss = $config['design']['stylesheet'] ?? null;
 
 if ($designCss) {
@@ -525,8 +512,4 @@ if ($designCss) {
     }
 }
 
-
-/* ------------------------------------------------------------
- * Done
- * ------------------------------------------------------------ */
 echo "Build complete: dist/index.html generated\n";

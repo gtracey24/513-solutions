@@ -113,11 +113,51 @@ body.theme-friendly .btn-primary:hover {
    SERVICE CARD — Friendly Mode
 ------------------------------------------------------------ */
 .service-card {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  background: #f8f9fa;
 }
+
+/* Background image layer */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* gentle */
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Dark overlay for readability */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  opacity: 0.25;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Hover effect */
+.service-card:hover::before {
+  opacity: 0.28;
+}
+
+.service-card:hover::after {
+  opacity: 0.35;
+}
+
+/* Ensure content stays above overlays */
+.service-card > * {
+  position: relative;
+  z-index: 3;
+}
+
 
 .service-toggle {
   background: none;
@@ -134,3 +174,68 @@ body.theme-friendly .btn-primary:hover {
   font-weight: 700;
   margin: 0;
 }
+
+/* ================================
+   REVIEW SUMMARY SECTION
+================================ */
+
+#review-summary {
+  background: #ffffff;
+}
+
+#review-summary .stars {
+  font-size: 2rem;
+  color: #f4b400; /* Google star color */
+  letter-spacing: 3px;
+}
+
+#review-summary .review-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+#review-summary .review-logo svg {
+  height: 32px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+#review-summary .review-logo svg:hover {
+  opacity: 1;
+}
+
+#review-summary .btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+/* ================================
+   TESTIMONIAL SECTION
+================================ */
+
+#testimonialCarousel .carousel-item {
+  min-height: 320px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-carousel-item {
+  min-height: 260px;   /* adjust to your tallest review */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  #testimonialCarousel .carousel-item {
+    min-height: 260px;
+  }
+}
+
+

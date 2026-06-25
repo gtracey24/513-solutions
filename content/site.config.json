@@ -14,11 +14,11 @@
     "stylesheet": "friendly-startup.css",
     "heroVariant": "split-gallery",
     "aboutVariant": "about-left-image",
-    "serviceStyle": "service-card-icon",
+    "serviceStyle": "service-card-simple",
     "processStyle": "default",
     "galleryStyle": "gallery-hero-full",
     "testimonialVariant": "testimonials-carousel",
-    "formVariant": "form-email"
+    "formVariant": "form-external"
   },
 "hero": {
   "headline": "For all your handyman</br>and remodeling needs.",
@@ -57,98 +57,36 @@
       "url": "#contact"
     }
   ],
-  "services": [
+"services": [
   {
     "title": "Handyman",
-    "id": "handyman",
-    "icon": "wrench",
     "gradient": "",
+    "icon": "",
     "image": "/assets/images/handyman.jpg",
-    "description": "Quick fixes and small projects handled with reliable, no‑nonsense craftsmanship.",
-    "focus": ["Repairs", "Installations", "Small Tasks"]
+    "id": "handyman",
+    "description": "From stuck doors to leaky fixtures and everything in between, our handyman services keep your home running smoothly. We handle the everyday repairs and small projects that make a big difference in comfort, safety, and convenience.",
+    "focus": ["General Repairs", "Minor Electrical", "Fixture Installs", "Carpentry Touch‑Ups", "Maintenance Tasks"]
   },
   {
     "title": "Small/Medium Remodels",
+    "gradient": "",
+    "icon": "",
+    "image": "/assets/images/interior.jpg",
     "id": "remodels",
-    "icon": "home",
-    "gradient": "",
-    "image": "/assets/images/remodel.jpg",
-    "description": "Practical upgrades and clean remodel work that improve how your space looks and functions.",
-    "focus": ["Kitchens", "Bathrooms", "Living Spaces"]
+    "description": "Ready to upgrade your space? We take on kitchens, bathrooms, basements, and other remodels that transform your home without the cost and chaos of a full renovation. Quality craftsmanship, clean work, and clear communication from start to finish.",
+    "focus": ["Kitchens", "Bathrooms", "Basements", "Flooring", "Drywall & Paint"]
   },
   {
-    "title": "Drywall",
-    "id": "drywall",
-    "icon": "slice",
+    "title": "Rental Property Management",
     "gradient": "",
-    "image": "/assets/images/drywall.jpg",
-    "description": "Smooth installs and seamless repairs that blend perfectly into your home.",
-    "focus": ["Patching", "Hanging", "Finishing"]
-  },
-  {
-    "title": "Decking",
-    "id": "decking",
-    "icon": "drill",
-    "gradient": "",
-    "image": "/assets/images/decking.jpg",
-    "description": "Durable, well‑built decks designed to handle weather and everyday use.",
-    "focus": ["New Builds", "Repairs", "Stairs & Railings"]
-  },
-  {
-    "title": "Fencing",
-    "id": "fencing",
-    "icon": "fence",
-    "gradient": "",
-    "image": "/assets/images/fencing.jpg",
-    "description": "Wood and composite fencing that adds privacy, security, and curb appeal.",
-    "focus": ["Wood Fencing", "Repairs", "Gates"]
-  },
-  {
-    "title": "Flooring",
-    "id": "flooring",
-    "icon": "chart-no-axes-gantt",
-    "gradient": "",
-    "image": "/assets/images/flooring.jpg",
-    "description": "Clean, durable flooring installs that refresh and modernize your home.",
-    "focus": ["LVP", "Laminate", "Tile"]
-  },
-  {
-    "title": "Painting",
-    "id": "painting",
-    "icon": "paintbrush",
-    "gradient": "",
+    "icon": "",
     "image": "/assets/images/painting.jpg",
-    "description": "Crisp interior and exterior painting that brings new life to your space.",
-    "focus": ["Interior", "Exterior", "Trim"]
-  },
-  {
-    "title": "Electrical",
-    "id": "electrical",
-    "icon": "zap",
-    "gradient": "",
-    "image": "/assets/images/electrical.jpg",
-    "description": "Safe, reliable minor electrical work for fixtures, outlets, and small upgrades.",
-    "focus": ["Fixtures", "Outlets", "Troubleshooting"]
-  },
-  {
-    "title": "Siding",
-    "id": "siding",
-    "icon": "warehouse",
-    "gradient": "",
-    "image": "/assets/images/siding.jpg",
-    "description": "Repairs and updates that keep your home protected and looking sharp.",
-    "focus": ["Repairs", "Trim", "Maintenance"]
-  },
-  {
-    "title": "Carpentry",
-    "id": "carpentry",
-    "icon": "hammer",
-    "gradient": "",
-    "image": "/assets/images/carpentry.jpg",
-    "description": "Custom woodwork and repairs that add strength, detail, and character.",
-    "focus": ["Trim", "Framing", "Built‑Ins"]
+    "id": "rental",
+    "description": "We help keep rentals in top shape with fast, reliable service. From turnover repairs to ongoing maintenance, we make property management easier and protect your investment with dependable, professional care.",
+    "focus": ["Turnovers", "Repairs", "Maintenance", "Tenant‑Ready Prep", "Emergency Services"]
   }
-],
+]
+,
   "training_packages": [
     {
       "number": "01",
@@ -279,7 +217,14 @@
 "form": {
   "headline": "Request a Quote",
   "description": "Have a project in mind or need help with repairs? Send us a message with the details and we’ll get back to you as soon as possible with next steps.",
-  "buttonLabel": "Send Message"
+  "buttonLabel": "Quote Form"
+},
+"reviews": {
+  "googleCount": 21,
+  "facebookCount": 21,
+  "averageRating": 4.9,
+  "ctaLabel": "See All Reviews",
+  "ctaLink": "https://www.google.com/search?sca_esv=56da2e285f45ed69&sxsrf=APpeQntm39dixh-tEJpviCSCAA6s7nZ1xA:1782425263790&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_9O8IDprz4IodckDOkp0Xz0ewahdLvhvI59ZHOgfBP0kkK7jpDOV6os1aKYVNftsyG1RD7qF1vGecWEjoqIGmvel15-A&q=513+Solutions+Reviews&sa=X&ved=2ahUKEwi7-b7Fs6OVAxXp0ckDHWFrIzkQ0bkNegQIIxAF&biw=1336&bih=708&dpr=1.25"
 }
 
 }
