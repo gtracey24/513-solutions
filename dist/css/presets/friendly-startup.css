@@ -217,14 +217,14 @@ body.theme-friendly .btn-primary:hover {
    TESTIMONIAL SECTION
 ================================ */
 
-#testimonialCarousel .carousel-item {
+#testimonialCarousel .carousel-item-fb{
   min-height: 320px; /* adjust as needed */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.testimonial-carousel-item {
+.testimonial-carousel-item-fb {
   min-height: 260px;   /* adjust to your tallest review */
   display: flex;
   flex-direction: column;
@@ -233,7 +233,7 @@ body.theme-friendly .btn-primary:hover {
 
 
 @media (max-width: 768px) {
-  #testimonialCarousel .carousel-item {
+  #testimonialCarousel .carousel-item-fb {
     min-height: 260px;
   }
 }
