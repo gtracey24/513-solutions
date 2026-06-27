@@ -118,8 +118,8 @@
   ],
   "gallery": [
     {
-      "image": "/assets/images/gallery-1.jpg",
-      "caption": "Collaborating with clients to build effective solutions."
+      "image": "/dist/assets/images/gallery-1.jpg",
+      "caption": "Collaborating wisdf clients to build effective solutions."
     },
     {
       "image": "/assets/images/gallery-2.jpg",
