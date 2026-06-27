@@ -25,9 +25,9 @@
   "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
   "images": [
     "/dist/assets/images/hero-image-1.jpg",
-    "/assets/images/hero-image-2.jpg",
-    "/assets/images/hero-image-3.jpg",
-    "/assets/images/hero-image-4.jpg"
+    "/dist/assets/images/hero-image-2.jpg",
+    "/dist/assets/images/hero-image-3.jpg",
+    "/dist/assets/images/hero-image-4.jpg"
   ],
   "cta": {
     "label": "Get Started",
