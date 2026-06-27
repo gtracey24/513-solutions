@@ -24,10 +24,10 @@
   "headline": "For all your handyman</br>and remodeling needs.",
   "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
   "images": [
-    "/dist/assets/images/hero-image-1.jpg",
-    "/dist/assets/images/hero-image-2.jpg",
-    "/dist/assets/images/hero-image-3.jpg",
-    "/dist/assets/images/hero-image-4.jpg"
+    "assets/images/hero-image-1.jpg",
+    "assets/images/hero-image-2.jpg",
+    "assets/images/hero-image-3.jpg",
+    "assets/images/hero-image-4.jpg"
   ],
   "cta": {
     "label": "Get Started",
@@ -118,15 +118,15 @@
   ],
   "gallery": [
     {
-      "image": "assets/images/sarah.jpg",
+      "image": "assets/images/gallery-1.jpg",
       "caption": "Collaborating wisdf clients to build effective solutions."
     },
     {
-      "image": "/assets/images/gallery-2.jpg",
+      "image": "assets/images/gallery-2.jpg",
       "caption": "Designing modern, user‑focused digital experiences."
     },
     {
-      "image": "/assets/images/gallery-3.jpg",
+      "image": "assets/images/gallery-3.jpg",
       "caption": "Celebrating successful launches and project milestones."
     }
   ],
