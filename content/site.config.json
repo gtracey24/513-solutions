@@ -62,7 +62,7 @@
     "title": "Handyman",
     "gradient": "",
     "icon": "",
-    "image": "/assets/images/handyman.jpg",
+    "image": "assets/images/handyman.jpg",
     "id": "handyman",
     "description": "From stuck doors to leaky fixtures and everything in between, our handyman services keep your home running smoothly. We handle the everyday repairs and small projects that make a big difference in comfort, safety, and convenience.",
     "focus": ["General Repairs", "Minor Electrical", "Fixture Installs", "Carpentry Touch‑Ups", "Maintenance Tasks"]
@@ -71,7 +71,7 @@
     "title": "Small/Medium Remodels",
     "gradient": "",
     "icon": "",
-    "image": "/assets/images/interior.jpg",
+    "image": "assets/images/interior.jpg",
     "id": "remodels",
     "description": "Ready to upgrade your space? We take on kitchens, bathrooms, basements, and other remodels that transform your home without the cost and chaos of a full renovation. Quality craftsmanship, clean work, and clear communication from start to finish.",
     "focus": ["Kitchens", "Bathrooms", "Basements", "Flooring", "Drywall & Paint"]
@@ -80,7 +80,7 @@
     "title": "Rental Property Management",
     "gradient": "",
     "icon": "",
-    "image": "/assets/images/painting.jpg",
+    "image": "assets/images/painting.jpg",
     "id": "rental",
     "description": "We help keep rentals in top shape with fast, reliable service. From turnover repairs to ongoing maintenance, we make property management easier and protect your investment with dependable, professional care.",
     "focus": ["Turnovers", "Repairs", "Maintenance", "Tenant‑Ready Prep", "Emergency Services"]
