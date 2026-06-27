@@ -1,0 +1,230 @@
+{
+  "site": {
+    "name": "513 Solutions",
+    "language": "en"
+  },
+  "seo": {
+    "title": "513 Solutions — Handyman/Remodeling Services in Edwardsville, IL",
+    "description": "For all your handyman and remodeling needs in Edwardsville, IL",
+    "canonical": "https://513solutions.net/",
+    "ogImage": "/assets/images/og-image.png"
+  },
+  "design": {
+    "theme": "friendly",
+    "stylesheet": "friendly-startup.css",
+    "heroVariant": "split-gallery",
+    "aboutVariant": "about-left-image",
+    "serviceStyle": "service-card-simple",
+    "processStyle": "default",
+    "galleryStyle": "gallery-hero-full",
+    "testimonialVariant": "testimonials-carousel",
+    "formVariant": "form-external"
+  },
+"hero": {
+  "headline": "For all your handyman</br>and remodeling needs.",
+  "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
+  "images": [
+    "/assets/images/hero-image-1.jpg",
+    "/assets/images/hero-image-2.jpg",
+    "/assets/images/hero-image-3.jpg",
+    "/assets/images/hero-image-4.jpg"
+  ],
+  "cta": {
+    "label": "Get Started",
+    "url": "#contact"
+  }
+},
+  "cta": {
+    "headline": "Your success is our priority from start to finish.",
+    "button": {},
+    "name": "",
+    "email": "",
+    "phone": "",
+    "image": "/assets/images/profile.jpg",
+    "description": "We provide clear guidance, reliable support, and solutions tailored to your goals. Let’s build something that moves your business forward."
+  },
+  "navigation": [
+    {
+      "label": "Services",
+      "url": "#services"
+    },
+    {
+      "label": "Process",
+      "url": "#process"
+    },
+    {
+      "label": "Contact",
+      "url": "#contact"
+    }
+  ],
+"services": [
+  {
+    "title": "Handyman",
+    "gradient": "",
+    "icon": "",
+    "image": "/assets/images/handyman.jpg",
+    "id": "handyman",
+    "description": "From stuck doors to leaky fixtures and everything in between, our handyman services keep your home running smoothly. We handle the everyday repairs and small projects that make a big difference in comfort, safety, and convenience.",
+    "focus": ["General Repairs", "Minor Electrical", "Fixture Installs", "Carpentry Touch‑Ups", "Maintenance Tasks"]
+  },
+  {
+    "title": "Small/Medium Remodels",
+    "gradient": "",
+    "icon": "",
+    "image": "/assets/images/interior.jpg",
+    "id": "remodels",
+    "description": "Ready to upgrade your space? We take on kitchens, bathrooms, basements, and other remodels that transform your home without the cost and chaos of a full renovation. Quality craftsmanship, clean work, and clear communication from start to finish.",
+    "focus": ["Kitchens", "Bathrooms", "Basements", "Flooring", "Drywall & Paint"]
+  },
+  {
+    "title": "Rental Property Management",
+    "gradient": "",
+    "icon": "",
+    "image": "/assets/images/painting.jpg",
+    "id": "rental",
+    "description": "We help keep rentals in top shape with fast, reliable service. From turnover repairs to ongoing maintenance, we make property management easier and protect your investment with dependable, professional care.",
+    "focus": ["Turnovers", "Repairs", "Maintenance", "Tenant‑Ready Prep", "Emergency Services"]
+  }
+]
+,
+  "training_packages": [
+    {
+      "number": "01",
+      "title": "Starter Package — $35/month",
+      "tagline": "Perfect for new businesses or teams needing structure and direction.",
+      "duration": "",
+      "focus": [],
+      "description": "Build a strong foundation with guided planning, consistent check‑ins, and essential tools to help your business operate smoothly.",
+      "gradient": "linear-gradient(135deg, #0a84ff15, #ffd60a15)"
+    },
+    {
+      "number": "02",
+      "title": "Growth Package — $50/month",
+      "tagline": "Ideal for businesses preparing for expansion, launches, or major initiatives.",
+      "duration": "",
+      "focus": [],
+      "description": "Includes weekly feedback, strategy sessions, and tailored planning to help you execute projects with confidence and clarity.",
+      "gradient": "linear-gradient(135deg, rgba(0,122,255,0.12), rgba(135,206,250,0.12))"
+    },
+    {
+      "number": "03",
+      "title": "Premium Package — $75/month",
+      "tagline": "For businesses seeking high‑touch support, optimization, and long‑term growth.",
+      "duration": "",
+      "focus": [],
+      "description": "Hands‑on consulting with detailed reviews, performance tracking, and adaptive planning to help you reach your most important goals.",
+      "gradient": "linear-gradient(135deg, rgba(255,94,58,0.12), rgba(255,195,0,0.12))"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/assets/images/gallery-1.jpg",
+      "caption": "Collaborating with clients to build effective solutions."
+    },
+    {
+      "image": "/assets/images/gallery-2.jpg",
+      "caption": "Designing modern, user‑focused digital experiences."
+    },
+    {
+      "image": "/assets/images/gallery-3.jpg",
+      "caption": "Celebrating successful launches and project milestones."
+    }
+  ],
+  "about": {
+    "headline": "About Our Business",
+    "image": "/assets/images/about.jpg",
+    "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, our focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
+  },
+  "footer": {
+    "text": "© 2026 Your Business. All rights reserved.",
+    "links": [
+      {
+        "label": "Privacy",
+        "url": "/privacy.html"
+      },
+      {
+        "label": "Terms",
+        "url": "/terms.html"
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "What People Say",
+    "itemStyle": "carousel-item-fb",
+    "items": [
+      {
+        "text": "Jordan and his crew did a fantastic job replacing our back outside steps. The craftsmanship and attention to detail were simply amazing. We wouldn’t hesitate to recommend them and will definitely call them again.",
+        "author": "Melissa Schuetz Wilkinson",
+        "role": "Founder, BrightPath",
+        "avatar": "/peal-paced/assets/images/sarah.jpg"
+      },
+      {
+        "text": "Jordan and his crew were awesome.  Quality work, arrived on the dot when they said they would, will definitely reach out for my next project.",
+        "author": "John Dowdy",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Very highly recommend!  Punctual quotes, timely with services, great quality work, and very kind, professional staff!",
+        "author": "Kath Szed",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordan and his team have completed multiple tasks for us over the past few years. Jordan does a wonderful job of evaluating and explaining how the job will be accomplished. The work is completed with excellence, integrity and professionalism. We highly recommend 513 to our family and friends.",
+        "author": "Romona Hartman Smith",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon and team did a great job moving my laundry room from the basement to the main floor of my house. Great guys to work with! I really appreciate it!",
+        "author": "Justin Sandbach",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon and 513 Solutions fixed a problem with my roof and dormer. They were quick and professional. I'm extremely happy with the way the work turned out. I wouldn't hesitate to recommend them to my family and friends and I will be definitely be calling them again.",
+        "author": "Grant Andree",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "513 Solutions came highly recommended by two close friends . . . and the company did not disappoint! They were kind, professional, and on-time which is important when managing a busy schedule and trusting someone into your home. During a stressful time of multiple issues, they eased my worries with their knowledge, resources, and great communication.",
+        "author": "Jessica Lynn Ambuehl",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Amazing from start to finish. Here when they said…which can be rare! All over paint and Drywall repair and it’s flawless! 12 stars out of 10!",
+        "author": "Christopher Stevens",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Very efficient, professional and incredibly easy to work with! Highly recommend!",
+        "author": "Metro East Humane Society",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      },
+            {
+        "text": "Jordon did a terrific job on my fence! everything from quote to finish was professional, timely & affordable. I am looking forward to more projects in the future.",
+        "author": "Beth Miller Mitchell",
+        "role": "Creative Director",
+        "avatar": "/assets/images/james.jpg"
+      }
+    ]
+  },
+"form": {
+  "headline": "Request a Quote",
+  "description": "Have a project in mind or need help with repairs? Send us a message with the details and we’ll get back to you as soon as possible with next steps.",
+  "buttonLabel": "Quote Form"
+},
+"reviews": {
+  "googleCount": 21,
+  "facebookCount": 21,
+  "averageRating": 4.9,
+  "ctaLabel": "See All Reviews",
+  "ctaLink": "https://www.google.com/search?sca_esv=56da2e285f45ed69&sxsrf=APpeQntm39dixh-tEJpviCSCAA6s7nZ1xA:1782425263790&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_9O8IDprz4IodckDOkp0Xz0ewahdLvhvI59ZHOgfBP0kkK7jpDOV6os1aKYVNftsyG1RD7qF1vGecWEjoqIGmvel15-A&q=513+Solutions+Reviews&sa=X&ved=2ahUKEwi7-b7Fs6OVAxXp0ckDHWFrIzkQ0bkNegQIIxAF&biw=1336&bih=708&dpr=1.25"
+}
+
+}
