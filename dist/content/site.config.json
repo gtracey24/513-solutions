@@ -24,7 +24,7 @@
   "headline": "For all your handyman</br>and remodeling needs.",
   "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
   "images": [
-    "/assets/images/hero-image-1.jpg",
+    "/dist/assets/images/hero-image-1.jpg",
     "/assets/images/hero-image-2.jpg",
     "/assets/images/hero-image-3.jpg",
     "/assets/images/hero-image-4.jpg"
