@@ -132,7 +132,7 @@
   ],
   "about": {
     "headline": "About Our Business",
-    "image": "/assets/images/about.jpg",
+    "image": "assets/images/about.jpg",
     "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, our focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
   },
   "footer": {
