@@ -20,6 +20,25 @@
     "testimonialVariant": "testimonials-carousel",
     "formVariant": "form-external"
   },
+
+  "pages": [
+    {
+      "template": "index",
+      "output": "index.html"
+    },
+    {
+      "template": "property-management/index",
+      "output": "property-management/index.html"
+    },
+    {
+      "template": "property-management/owners",
+      "output": "property-management/owners.html"
+    },
+    {
+      "template": "property-management/tenants",
+      "output": "property-management/tenants.html"
+    }
+  ],
 "hero": {
   "headline": "For all your handyman</br>and remodeling needs.",
   "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
@@ -58,7 +77,7 @@
     },
      {
       "label": "Property Management",
-      "url": "https://gtracey24.github.io/513-property/"
+      "url": "/property-management/"
     }
   ],
 "services": [
