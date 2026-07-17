@@ -1,0 +1,21 @@
+<section id="hero" class="section hero-{{HERO_VARIANT}} hero-wide position-relative">
+
+  <!-- Rotating Background Images -->
+  <div class="hero-image-rotator hero-rotator-wide">
+    {{HERO_IMAGES}}
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Centered Text ON TOP of the images -->
+  <div class="hero-wide-content d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 class="display-3 mb-3">{{HERO_HEADLINE}}</h1>
+    <p class="lead mb-4">{{HERO_SUBHEADLINE}}</p>
+
+    <a href="{{HERO_CTA_URL}}" class="btn btn-dark">
+      {{HERO_CTA_LABEL}}
+    </a>
+  </div>
+
+</section>
