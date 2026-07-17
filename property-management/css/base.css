@@ -1,0 +1,54 @@
+:root {
+  /* --- Deep Contractor Palette (Navy / Dark Gray / Gold) --- */
+
+  --color-bg: #E5E7EB;              /* light gray background */
+  --color-surface: #FFFFFF;         /* white cards */
+  --color-text: #1F2937;            /* dark gray text */
+  --color-text-light: #6B7280;      /* medium gray */
+
+  --color-primary: #0B1120;         /* deep navy (stronger) */
+  --color-primary-dark: #111827;    /* slate navy (stronger) */
+  --color-primary-light: #374151;   /* slate gray */
+
+  --color-secondary: #111827;       /* deep slate */
+  --color-secondary-light: #1F2937; /* dark gray */
+
+  --color-accent: #EAB308;          /* rich gold */
+  --color-accent-dark: #CA8A04;     /* deep gold */
+
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-medium: 0 12px 28px rgba(0,0,0,0.18);
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Radius */
+  --btn-radius: 0.375rem;
+
+  /* Bootstrap Overrides */
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 11, 17, 32;
+  --bs-body-bg: var(--color-bg);
+  --bs-body-color: var(--color-text);
+}
+
+
+:root {
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.service-block h3,
+.hero-wrapper h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
