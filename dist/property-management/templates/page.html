@@ -7,10 +7,6 @@
 
 <body class="{{THEME_CLASS}}">
 
-  <!-- Background layers -->
-  <div class="parallax-texture"></div>
-  <div class="frosted-layer"></div>
-
   <!-- Site chrome -->
   {{PARTIAL_NAV}}
 
@@ -19,81 +15,6 @@
   </main>
 <!-- 
   {{PARTIAL_FOOTER}} -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  // Close all open collapses when clicking outside any card
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.service-card')) {
-      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
-        let collapse = bootstrap.Collapse.getInstance(openItem);
-        if (collapse) collapse.hide();
-      });
-    }
-  });
-
-  // Close other cards when opening a new one
-  document.querySelectorAll('.service-card').forEach(function (card) {
-    card.addEventListener('click', function () {
-      const target = card.getAttribute('data-bs-target');
-
-      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
-        if ('#' + openItem.id !== target) {
-          let collapse = bootstrap.Collapse.getInstance(openItem);
-          if (collapse) collapse.hide();
-        }
-      });
-    });
-  });
-
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  document.querySelectorAll('.service-card').forEach(card => {
-    const collapseId = card.getAttribute('data-bs-target');
-    const collapseEl = document.querySelector(collapseId);
-    const bg = card.getAttribute('data-bg');
-
-    collapseEl.addEventListener('show.bs.collapse', () => {
-      card.style.backgroundImage = `url('${bg}')`;
-      card.classList.add('bg-active');
-    });
-
-    collapseEl.addEventListener('hide.bs.collapse', () => {
-      card.style.backgroundImage = '';
-      card.classList.remove('bg-active');
-    });
-  });
-
-});
-</script>
-<script src="/js/hero-rotator.js"></script>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-
-
-
-<i data-lucide="hammer"></i>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a3dc2cad7f5cd1d89f63512/1js0k1q1l';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 </body>
 

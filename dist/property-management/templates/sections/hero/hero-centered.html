@@ -1,11 +1,12 @@
 <header class="hero-{{HERO_VARIANT}} container py-5 text-center">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" style="align-items: center; min-height: 60vh;">
     <div class="col-lg-8">
       <h1>{{HERO_HEADLINE}}</h1>
       <p class="lead">{{HERO_SUBHEADLINE}}</p>
-      <a href="{{HERO_CTA_URL}}" class="btn btn-primary mb-4">
-        {{HERO_CTA_LABEL}}
-      </a>
+<div class="hero-cta-buttons d-flex gap-3 flex-wrap justify-content-center">
+  {{HERO_CTA_BUTTONS}}
+</div>
+
     </div>
 
     <div class="col-lg-8">

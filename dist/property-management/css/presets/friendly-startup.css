@@ -238,4 +238,185 @@ body.theme-friendly .btn-primary:hover {
   }
 }
 
+/* ================================
+   BUTTON SECTION
+================================ */
+
+.buttons-section {
+  min-height: 400px; /* centers vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.sf-button-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.sf-button {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: #fff;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.sf-button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   ALTERNATING ACTION BUTTON COLORS
+============================================ */
+
+/* Remove inline background so CSS can override */
+.action-button {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+/* Odd buttons = dark */
+.actions-wrapper a:nth-child(odd).action-button {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+/* Even buttons = white */
+.actions-wrapper a:nth-child(even).action-button {
+  background: #fff !important;
+  color: #222 !important;
+  border: 2px solid #222 !important;
+}
+
+/* Hover states */
+.actions-wrapper a:nth-child(odd).action-button:hover {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.actions-wrapper a:nth-child(even).action-button:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+
+.btn-primary.btn-lg.cta-pop {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-primary.btn-lg.cta-pop:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.32);
+}
+
+/* Wide vacancies section */
+.vacancies-wide {
+  width: 100%;
+  max-width: 1400px; /* wider than your old 900px */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title styling */
+.vacancies-title {
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Embed container */
+.vacancies-embed {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* ============================================
+   MOBILE FRIENDLY TENANT + OWNER SECTIONS
+============================================ */
+
+@media (max-width: 768px) {
+
+  /* Make text centered on mobile */
+  #tenants div,
+  #owners div {
+    text-align: center !important;
+    padding: 0 20px;
+  }
+
+  /* Reduce headline sizes */
+  #tenants h2,
+  #owners h2 {
+    font-size: 2rem !important;
+    line-height: 1.25;
+  }
+
+  #tenants h3,
+  #owners h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+
+  /* Paragraph readability */
+  #tenants p,
+  #owners p {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Bullet list spacing */
+  #tenants ul,
+  #owners ul {
+    padding: 0 !important;
+    margin: 0 auto 1.5rem auto !important;
+    text-align: left !important;
+    max-width: 320px;
+  }
+
+  /* Buttons stack cleanly */
+  #tenants .actions-wrapper,
+  #owners .actions-wrapper {
+    justify-content: center !important;
+    gap: 1rem !important;
+    flex-direction: column;
+  }
+
+  #tenants .action-button,
+  #owners .action-button {
+    width: 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* Section padding */
+  #tenants,
+  #owners {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    min-height: auto !important;
+  }
+}
+
+
+
 
