@@ -27,17 +27,12 @@
       "output": "index.html"
     },
     {
-      "template": "property-management/index",
-      "output": "property-management/index.html"
-    },
-    {
-      "template": "property-management/owners",
-      "output": "property-management/owners.html"
-    },
-    {
-      "template": "property-management/tenants",
-      "output": "property-management/tenants.html"
-    }
+  "template": "property-management",
+  "output": "property-management.html",
+  "sections": ["property-management"]
+}
+
+
   ],
 "hero": {
   "headline": "For all your handyman</br>and remodeling needs.",

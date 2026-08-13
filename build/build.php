@@ -469,6 +469,97 @@ if (!is_dir($distPath)) {
 
 file_put_contents($distPath . '/index.html', $html);
 
+/* ============================================================
+ * MULTI-PAGE SUPPORT (FULL)
+ * ============================================================ */
+
+foreach ($config['pages'] as $page) {
+
+    $templateName = $page['template'];
+    $outputName   = $page['output'];
+
+    $templatePath = $root . "/templates/pages/{$templateName}.html";
+    $contentPath  = $root . "/content/pages/{$templateName}.json";
+
+    if (!file_exists($templatePath)) {
+        echo "⚠ Template missing: $templatePath\n";
+        continue;
+    }
+
+    $pageContent = file_get_contents($templatePath);
+
+    $contentData = [];
+    if (file_exists($contentPath)) {
+        $contentData = json_decode(file_get_contents($contentPath), true);
+    }
+
+    // Replace page-specific tokens
+    foreach ($contentData as $key => $value) {
+        $token = '{{ ' . $key . ' }}';
+        $pageContent = str_replace($token, $value, $pageContent);
+    }
+
+    // Wrap with global layout
+    $html = str_replace('{{PAGE_CONTENT}}', $pageContent, $pageWrapper);
+
+    /* HEAD */
+    $html = str_replace(
+      '{{PARTIAL_HEAD}}',
+      file_get_contents($root . '/templates/partials/head.html'),
+      $html
+    );
+
+    /* NAV */
+    $navHtml = file_get_contents($root . '/templates/partials/nav.html');
+    $navHtml = str_replace('{{NAV_NAME}}', $config['site']['name'], $navHtml);
+
+    $navItemsHtml = '';
+    $navItemTemplate = file_get_contents($root . '/templates/components/nav-item.html');
+
+    foreach ($config['navigation'] as $item) {
+        $navItemsHtml .= str_replace(
+            ['{{NAV_LABEL}}', '{{NAV_URL}}'],
+            [$item['label'], $item['url']],
+            $navItemTemplate
+        );
+    }
+
+    $navHtml = str_replace('{{NAV_ITEMS}}', $navItemsHtml, $navHtml);
+    $html = str_replace('{{PARTIAL_NAV}}', $navHtml, $html);
+
+    /* FOOTER */
+    $footerHtml = file_get_contents($root . '/templates/partials/footer.html');
+    $footerHtml = str_replace('{{FOOTER_TEXT}}', $config['footer']['text'], $footerHtml);
+
+    $footerLinksHtml = '';
+    $footerLinkTemplate = file_get_contents($root . '/templates/components/footer-link.html');
+
+    foreach ($config['footer']['links'] as $link) {
+        $footerLinksHtml .= str_replace(
+            ['{{FOOTER_LINK_LABEL}}', '{{FOOTER_LINK_URL}}'],
+            [$link['label'], $link['url']],
+            $footerLinkTemplate
+        );
+    }
+
+    $footerHtml = str_replace('{{FOOTER_LINKS}}', $footerLinksHtml, $footerHtml);
+    $html = str_replace('{{PARTIAL_FOOTER}}', $footerHtml, $html);
+
+    /* ⭐ GLOBAL TOKEN REPLACEMENT (THE MISSING STEP) ⭐ */
+    $html = str_replace(
+      array_keys($replacements),
+      array_values($replacements),
+      $html
+    );
+
+    // Write the page
+    file_put_contents($distPath . "/{$outputName}", $html);
+
+    echo "✔ Built page: {$outputName}\n";
+}
+
+
+
 /* ------------------------------------------------------------
  * Copy static assets
  * ------------------------------------------------------------ */

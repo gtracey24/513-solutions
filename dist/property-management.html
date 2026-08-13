@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>513 Solutions — Handyman/Remodeling Services in Edwardsville, IL</title>
+<meta name="description" content="For all your handyman and remodeling needs in Edwardsville, IL" />
+<link rel="canonical" href="https://513solutions.net/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="513 Solutions — Handyman/Remodeling Services in Edwardsville, IL" />
+<meta property="og:description" content="For all your handyman and remodeling needs in Edwardsville, IL" />
+<meta property="og:image" content="/assets/images/og-image.png" />
+<meta property="og:url" content="https://513solutions.net/" />
+
+<!-- CSS -->
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- Bootstrap Core -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- YOUR CSS (Correct Order) -->
+<link rel="stylesheet" href="css/base.css" />        <!-- global variables FIRST -->
+<link rel="stylesheet" href="css/main.css" />        <!-- layout + sections -->
+<link rel="stylesheet" href="css/components.css" />  <!-- cards, buttons, etc -->
+<link rel="stylesheet" href="css/presets/friendly-startup.css?v=3" /> <!-- theme overrides -->
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<body class="theme-friendly">
+
+  <!-- Background layers -->
+  <div class="parallax-texture"></div>
+  <div class="frosted-layer"></div>
+
+  <!-- Site chrome -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+  <img src="assets/images/logo-513solutions.png" alt="513 Solutions" />
+</a>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+     <ul class="navbar-nav ms-auto">
+  <li class="nav-item">
+  <a class="nav-link" href="#services">
+    Services
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#process">
+    Process
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#contact">
+    Contact
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://gtracey24.github.io/513-property/">
+    Property Management
+  </a>
+</li>
+
+</ul>
+
+    </div>
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<main id="content" class="px-3 px-md-0">
+    <section>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</section>
+
+  </main>
+<!-- 
+  <footer class="site-footer container py-4">
+  <div class="row">
+    <div class="col-md-6">
+      <p>© 2026 Your Business. All rights reserved.</p>
+    </div>
+
+    <div class="col-md-6 text-md-end">
+      <ul class="footer-links list-inline mb-0">
+        <li class="list-inline-item">
+  <a href="/privacy.html">Privacy</a>
+</li>
+<li class="list-inline-item">
+  <a href="/terms.html">Terms</a>
+</li>
+
+      </ul>
+    </div>
+  </div>
+</footer>
+ -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Close all open collapses when clicking outside any card
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.service-card')) {
+      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
+        let collapse = bootstrap.Collapse.getInstance(openItem);
+        if (collapse) collapse.hide();
+      });
+    }
+  });
+
+  // Close other cards when opening a new one
+  document.querySelectorAll('.service-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      const target = card.getAttribute('data-bs-target');
+
+      document.querySelectorAll('.collapse.show').forEach(function (openItem) {
+        if ('#' + openItem.id !== target) {
+          let collapse = bootstrap.Collapse.getInstance(openItem);
+          if (collapse) collapse.hide();
+        }
+      });
+    });
+  });
+
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelectorAll('.service-card').forEach(card => {
+    const collapseId = card.getAttribute('data-bs-target');
+    const collapseEl = document.querySelector(collapseId);
+    const bg = card.getAttribute('data-bg');
+
+    collapseEl.addEventListener('show.bs.collapse', () => {
+      card.style.backgroundImage = `url('${bg}')`;
+      card.classList.add('bg-active');
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', () => {
+      card.style.backgroundImage = '';
+      card.classList.remove('bg-active');
+    });
+  });
+
+});
+</script>
+<script src="/js/hero-rotator.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+
+<i data-lucide="hammer"></i>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a3dc2cad7f5cd1d89f63512/1js0k1q1l';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>
