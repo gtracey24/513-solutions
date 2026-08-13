@@ -27,17 +27,12 @@
       "output": "index.html"
     },
     {
-      "template": "property-management/index",
-      "output": "property-management/index.html"
-    },
-    {
-      "template": "property-management/owners",
-      "output": "property-management/owners.html"
-    },
-    {
-      "template": "property-management/tenants",
-      "output": "property-management/tenants.html"
-    }
+  "template": "property-management",
+  "output": "property-management.html",
+  "sections": ["property-management"]
+}
+
+
   ],
 "hero": {
   "headline": "For all your handyman</br>and remodeling needs.",
@@ -176,7 +171,7 @@
     "itemStyle": "carousel-item-fb",
     "items": [
       {
-        "text": "Jordan and his crew did a fantastic job replacing our back outside steps. The craftsmanship and attention to detail were simply amazing. We wouldn’t hesitate to recommend them and will definitely call them again.",
+        "text": "Jordan and his crew did a fantastic job replacing our back outside steps.",
         "author": "Melissa Schuetz Wilkinson",
         "role": "Founder, BrightPath",
         "avatar": "/peal-paced/assets/images/sarah.jpg"
@@ -194,7 +189,7 @@
         "avatar": "/assets/images/james.jpg"
       },
             {
-        "text": "Jordan and his team have completed multiple tasks for us over the past few years. Jordan does a wonderful job of evaluating and explaining how the job will be accomplished. The work is completed with excellence, integrity and professionalism. We highly recommend 513 to our family and friends.",
+        "text": "Jordan and his team have completed multiple tasks for us over the past few years. Jordan does a wonderful job of evaluating and explaining how the job will be accomplished.",
         "author": "Romona Hartman Smith",
         "role": "Creative Director",
         "avatar": "/assets/images/james.jpg"
@@ -206,13 +201,13 @@
         "avatar": "/assets/images/james.jpg"
       },
             {
-        "text": "Jordon and 513 Solutions fixed a problem with my roof and dormer. They were quick and professional. I'm extremely happy with the way the work turned out. I wouldn't hesitate to recommend them to my family and friends and I will be definitely be calling them again.",
+        "text": "Jordon and 513 Solutions fixed a problem with my roof and dormer. They were quick and professional. I'm extremely happy with the way the work turned out.",
         "author": "Grant Andree",
         "role": "Creative Director",
         "avatar": "/assets/images/james.jpg"
       },
             {
-        "text": "513 Solutions came highly recommended by two close friends . . . and the company did not disappoint! They were kind, professional, and on-time which is important when managing a busy schedule and trusting someone into your home. During a stressful time of multiple issues, they eased my worries with their knowledge, resources, and great communication.",
+        "text": "513 Solutions came highly recommended by two close friends . . . and the company did not disappoint! They were kind, professional, and on-time which is important when managing a busy schedule and trusting someone into your home.",
         "author": "Jessica Lynn Ambuehl",
         "role": "Creative Director",
         "avatar": "/assets/images/james.jpg"

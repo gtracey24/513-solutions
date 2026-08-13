@@ -290,31 +290,3 @@
 .hero-animate {
   animation: heroFloatIn 1s ease-out forwards;
 }
-
-/* ============================================
-   MOBILE SERVICE BLOCK WIDTH FIX
-   Makes service cards wider on mobile
-=========================================== */
-@media (max-width: 768px) {
-
-  .service-block {
-    width: calc(100% - .5rem) !important;   /* wider card */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 1.25rem !important;
-    border-radius: 14px !important;
-  }
-
-  .service-block .service-content h3,
-  .service-block .service-content .card-title {
-    font-size: 1.3rem !important;
-    line-height: 1.3 !important;
-    white-space: normal !important;
-    word-break: keep-all !important;
-  }
-
-  .service-block .service-content {
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
-  }
-}
