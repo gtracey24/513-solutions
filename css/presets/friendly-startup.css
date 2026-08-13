@@ -238,4 +238,101 @@ body.theme-friendly .btn-primary:hover {
   }
 }
 
+/* ============================================
+   MOBILE LAYOUT FIX — Friendly Theme
+   Makes every section breathe properly
+   ============================================ */
+@media (max-width: 768px) {
 
+  /* Global spacing */
+  body {
+    padding: 0 1rem;
+    line-height: 1.55;
+  }
+
+  main#content {
+    padding: 1rem 0;
+  }
+
+  section {
+    padding: 1.75rem 0 !important;
+  }
+
+  /* Headings */
+  h1, .hero-title {
+    font-size: 1.5rem !important;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  /* Services section */
+  .services{
+    padding: .2rem 0 !important;
+  }
+  .service-card {
+    margin-bottom: 1.25rem;
+    padding: .2rem !important;
+  }
+
+  .service-card h3 {
+    font-size: 1rem !important;
+  }
+
+  .card {
+    padding: 0.2rem !important;
+    
+  }
+  
+
+  /* Gallery */
+  .gallery-item img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  /* Testimonials */
+  .testimonial-item {
+    padding: 1rem !important;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Reviews block */
+  .reviews-summary,
+  .stars {
+    text-align: center;
+  }
+
+  .reviews-summary h3 {
+    font-size: 1.4rem !important;
+  }
+
+  .reviews-summary p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 0 !important;
+  }
+
+  footer ul {
+    margin-top: 1rem;
+  }
+}
