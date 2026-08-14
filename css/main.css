@@ -3,7 +3,7 @@
 ------------------------------------------------------------ */
 
 .section:nth-of-type(even) {
-  background: rgba(11, 17, 32, 0.30); /* 30% deep navy tint */
+  background: rgba(11, 17, 32, 0.30);
 }
 
 .section:nth-of-type(odd) {

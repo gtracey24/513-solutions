@@ -118,19 +118,6 @@ body.theme-friendly .btn-primary:hover {
   background: #f8f9fa;
 }
 
-/* Background image layer */
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--card-bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.15; /* gentle */
-  transition: opacity 0.4s ease;
-  z-index: 1;
-}
 
 /* Dark overlay for readability */
 .service-card::after {
@@ -174,6 +161,18 @@ body.theme-friendly .btn-primary:hover {
   font-weight: 700;
   margin: 0;
 }
+
+/* ------------------------------------------------------------
+   SERVICES SHADOW BOX — BLACK, YELLOW, GREY
+------------------------------------------------------------ */
+
+/* .service-card:nth-of-type(even) {
+  background: rgba(11, 17, 32, 0.30);
+}
+
+.service-card:nth-of-type(odd) {
+  background: rgb(229, 183, 29)
+} */
 
 /* ================================
    REVIEW SUMMARY SECTION
