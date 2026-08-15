@@ -43,6 +43,7 @@
     "assets/images/hero-image-3.jpg",
     "assets/images/hero-image-4.jpg"
   ],
+  "url": "#form",
   "cta": {
     "label": "Get Started",
     "url": "#contact"
@@ -61,10 +62,6 @@
     {
       "label": "Services",
       "url": "#services"
-    },
-    {
-      "label": "Process",
-      "url": "#process"
     },
     {
       "label": "Contact",

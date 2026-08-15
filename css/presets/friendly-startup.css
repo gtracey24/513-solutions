@@ -118,19 +118,6 @@ body.theme-friendly .btn-primary:hover {
   background: #f8f9fa;
 }
 
-/* Background image layer */
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--card-bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.15; /* gentle */
-  transition: opacity 0.4s ease;
-  z-index: 1;
-}
 
 /* Dark overlay for readability */
 .service-card::after {
@@ -175,6 +162,18 @@ body.theme-friendly .btn-primary:hover {
   margin: 0;
 }
 
+/* ------------------------------------------------------------
+   SERVICES SHADOW BOX — BLACK, YELLOW, GREY
+------------------------------------------------------------ */
+
+/* .service-card:nth-of-type(even) {
+  background: rgba(11, 17, 32, 0.30);
+}
+
+.service-card:nth-of-type(odd) {
+  background: rgb(229, 183, 29)
+} */
+
 /* ================================
    REVIEW SUMMARY SECTION
 ================================ */
@@ -211,31 +210,6 @@ body.theme-friendly .btn-primary:hover {
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
   border-radius: 6px;
-}
-
-/* ================================
-   TESTIMONIAL SECTION
-================================ */
-
-#testimonialCarousel .carousel-item-fb{
-  min-height: 320px; /* adjust as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.testimonial-carousel-item-fb {
-  min-height: 260px;   /* adjust to your tallest review */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-@media (max-width: 768px) {
-  #testimonialCarousel .carousel-item-fb {
-    min-height: 260px;
-  }
 }
 
 /* ============================================
