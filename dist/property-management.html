@@ -118,15 +118,16 @@
   <!--CARD COLOR CHANGE-->
   <script>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const allCards = document.querySelectorAll('service-card');
+    const cardShadowArray = ["#000000", "#e5b71d", "#808080"];
 
-    allCards.forEach((card, i) => {
-      let colorIndex = i % cardShadowArray.length
-      card.style.boxShadow = `0 0 20px ${cardShadowArray[colorIndex]}`;
+    document.addEventListener("DOMContentLoaded", () => {
+      const allCards = document.querySelectorAll('.service-card');
+      allCards.forEach((card, i) => {
+        let colorIndex = i % cardShadowArray.length
+        card.style.boxShadow = `10px 10px 2px ${cardShadowArray[colorIndex]}`;
+      });
     });
-    });
-    
+
   </script>
 
   <script src="/js/hero-rotator.js"></script>

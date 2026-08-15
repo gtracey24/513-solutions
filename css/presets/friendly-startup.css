@@ -212,31 +212,6 @@ body.theme-friendly .btn-primary:hover {
   border-radius: 6px;
 }
 
-/* ================================
-   TESTIMONIAL SECTION
-================================ */
-
-#testimonialCarousel .carousel-item-fb{
-  min-height: 320px; /* adjust as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.testimonial-carousel-item-fb {
-  min-height: 260px;   /* adjust to your tallest review */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-@media (max-width: 768px) {
-  #testimonialCarousel .carousel-item-fb {
-    min-height: 260px;
-  }
-}
-
 /* ============================================
    MOBILE LAYOUT FIX — Friendly Theme
    Makes every section breathe properly

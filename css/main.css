@@ -3,11 +3,11 @@
 ------------------------------------------------------------ */
 
 .section:nth-of-type(even) {
-  background: rgba(11, 17, 32, 0.30);
+  background: rgba(208, 209, 211, 0.3);
 }
 
 .section:nth-of-type(odd) {
-  background: var(--color-surface);
+  background:rgba(101, 114, 147, 0.3);
 }
 
 
@@ -161,6 +161,20 @@
   backdrop-filter: blur(6px);
   border-radius: var(--bs-border-radius);
 }
+
+#testimonialCarousel .carousel-item {
+  min-height: 260px; /* adjust to your tallest testimonial */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* prevents content from covering the next slide */
+}
+
+.testimonial-carousel-item {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 
 
 /* ------------------------------------------------------------
