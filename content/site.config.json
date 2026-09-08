@@ -36,7 +36,7 @@
   ],
 "hero": {
   "headline": "For all your handyman</br>and remodeling needs.",
-  "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
+  "subheadline": "Making home projects simple, stress‑free, and done right throughout the Metro East.",
   "images": [
     "assets/images/hero-image-1.jpg",
     "assets/images/hero-image-2.jpg",
@@ -92,7 +92,7 @@
     "focus": ["Kitchens", "Bathrooms", "Basements", "Flooring", "Drywall & Paint"]
   },
   {
-    "title": "Rental Property Management",
+    "title": "Property Management",
     "gradient": "",
     "icon": "",
     "image": "assets/images/painting.jpg",
@@ -102,6 +102,13 @@
   }
 ]
 ,
+"faq": [
+  {
+    "title": "What does 513 mean?",
+    "image": "",
+    "description": "513 is derived from the verse Galatians 5:13;<br>For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the flesh, but through love serve one another. (ESV)<br>This name-sake idea first started with 513 Ministries, which served the greater St. Louis area by organizing free meal drives and construction services to families and individuals in need.<br>We are proud to carry on the 513 name and strive to conduct our business in a way that mirrors Galatians 5:13."
+  }
+],
   "training_packages": [
     {
       "number": "01",
@@ -148,7 +155,7 @@
   "about": {
     "headline": "About Our Business",
     "image": "assets/images/about.jpg",
-    "description": "513 Solutions was built on a simple goal: to make home projects easier for homeowners throughout the Edwardsville area. Whether it’s a small repair, a weekend project that keeps getting pushed off, or a larger update that needs to be done right, our focus is always on reliable workmanship and clear communication. Homeowners deserve someone who shows up, listens, and takes pride in the details. Every project is approached with care, professionalism, and a commitment to results that last."
+    "description": "513 Solutions was formed in 2019 and has grown into a thriving handyman and remodeling business in the St. Louis Metro-East area. The company is founded on the fundamental principle of serving our customers and our community. As we have continued to grow, 513 has been able to expand its range of services offered by leveraging long-lasting relationships with trade professionals in the area. We strive to offer a comprehensive, turn-key solution for your next remodeling project."
   },
   "footer": {
     "text": "© 2026 Your Business. All rights reserved.",
@@ -231,7 +238,7 @@
   },
 "form": {
   "headline": "Request a Quote",
-  "description": "Have a project in mind or need help with repairs? Send us a message with the details and we’ll get back to you as soon as possible with next steps.",
+  "description": "Have a project in mind or need help with repairs? Fill out this virtual quote form and we’ll get back to you as soon as possible with next steps.",
   "buttonLabel": "Quote Form"
 },
 "reviews": {
