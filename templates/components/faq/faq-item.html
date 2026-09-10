@@ -1,1 +1,23 @@
-test
+<section class="about py-5 fade-scroll">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- IMAGE + HEADLINE COLUMN -->
+      <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+        <img
+          src="{{FAQ_IMAGE}}"
+          alt="FAQ image"
+          style="width: 320px; height: 320px; object-fit: cover;"
+        />
+        
+      </div>
+      <div class="col-lg-8">
+<h2 class="mt-3">{{FAQ_QUESTION}}</h2>
+      <!-- DESCRIPTION COLUMN -->
+        <p class="lead" style="overflow-wrap: break-word; word-break: break-word;">
+        {{FAQ_ANSWER}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

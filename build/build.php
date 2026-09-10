@@ -305,8 +305,8 @@ $faqItemTemplate = file_get_contents(
 if (!empty($config['faq'])) {
   foreach ($config['faq'] as $item) {
     $faqHtml .= str_replace(
-      ['{{FAQ_QUESTION}}', '{{FAQ_ANSWER}}'],
-      [$item['question'], $item['answer']],
+      ['{{FAQ_QUESTION}}', '{{FAQ_ANSWER}}', '{{FAQ_IMAGE}}'],
+      [$item['question'], $item['answer'], $item['image']],
       $faqItemTemplate
     );
   }

@@ -50,13 +50,13 @@
   }
 },
   "cta": {
-    "headline": "Your success is our priority from start to finish.",
+    "headline": "",
     "button": {},
     "name": "",
-    "email": "",
-    "phone": "",
+    "email": "jbakley@513solutions.net",
+    "phone": "618.363.6451",
     "image": "/assets/images/profile.jpg",
-    "description": "We provide clear guidance, reliable support, and solutions tailored to your goals. Let’s build something that moves your business forward."
+    "description": ""
   },
   "navigation": [
     {
@@ -104,9 +104,9 @@
 ,
 "faq": [
   {
-    "title": "What does 513 mean?",
-    "image": "",
-    "description": "513 is derived from the verse Galatians 5:13;<br>For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the flesh, but through love serve one another. (ESV)<br>This name-sake idea first started with 513 Ministries, which served the greater St. Louis area by organizing free meal drives and construction services to families and individuals in need.<br>We are proud to carry on the 513 name and strive to conduct our business in a way that mirrors Galatians 5:13."
+    "question": "What does 513 mean?",
+    "image": "assets/images/gallery-4.jpg",
+    "answer": "513 is derived from the verse Galatians 5:13;<br><b><i>For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the flesh, but through love serve one another. (ESV)</b></i><br>This name-sake idea first started with 513 Ministries, which served the greater St. Louis area by organizing free meal drives and construction services to families and individuals in need.<br>We are proud to carry on the 513 name and strive to conduct our business in a way that mirrors Galatians 5:13."
   }
 ],
   "training_packages": [
