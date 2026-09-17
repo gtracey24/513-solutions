@@ -180,6 +180,8 @@ body.theme-friendly .btn-primary:hover {
 
 #review-summary {
   background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);  
 }
 
 #review-summary .stars {
@@ -191,6 +193,7 @@ body.theme-friendly .btn-primary:hover {
 #review-summary .review-logos {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
@@ -216,6 +219,11 @@ body.theme-friendly .btn-primary:hover {
     background:dodgerblue;
     border-radius:.5rem;
     color:white;
+    display:flex;
+    direction:column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
     padding:1.5rem;
     max-width:250px;
     aspect-ratio:1/1;
@@ -225,6 +233,18 @@ body.theme-friendly .btn-primary:hover {
     width:80px;
     height:80px;
 }
+
+/* ============================================
+    FAQ
+   ============================================ */
+
+   .faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+   
 
 /* ============================================
    MOBILE LAYOUT FIX — Friendly Theme
