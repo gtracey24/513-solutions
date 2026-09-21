@@ -110,74 +110,24 @@ body.theme-friendly .btn-primary:hover {
 }
 
 /* ------------------------------------------------------------
-   SERVICE CARD — Friendly Mode
+   SERVICES SECTION
 ------------------------------------------------------------ */
+
 .service-card {
-  position: relative;
-  overflow: hidden;
-  background: #f8f9fa;
+  background: rgba(255,255,255);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 calc(50% - 2rem);
 }
-
-
-/* Dark overlay for readability */
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-  opacity: 0.25;
-  transition: opacity 0.4s ease;
-  z-index: 2;
-}
-
-/* Hover effect */
-.service-card:hover::before {
-  opacity: 0.28;
-}
-
-.service-card:hover::after {
-  opacity: 0.35;
-}
-
-/* Ensure content stays above overlays */
-.service-card > * {
-  position: relative;
-  z-index: 3;
-}
-
-
-.service-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  text-align: left;
-}
-
-.service-card.open { border: none !important; }
-
-.card-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* ------------------------------------------------------------
-   SERVICES SHADOW BOX — BLACK, YELLOW, GREY
------------------------------------------------------------- */
-
-/* .service-card:nth-of-type(even) {
-  background: rgba(11, 17, 32, 0.30);
-}
-
-.service-card:nth-of-type(odd) {
-  background: rgb(229, 183, 29)
-} */
 
 /* ================================
    REVIEW SUMMARY SECTION
 ================================ */
 
+.main-box {
+  display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; padding: 2rem 0;
+}
 #review-summary {
   background: #ffffff;
   border-radius: 25px;
@@ -214,6 +164,9 @@ body.theme-friendly .btn-primary:hover {
   font-size: 1rem;
   border-radius: 6px;
 }
+.reviews-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;
+}
 
 .fb-card {
     background:dodgerblue;
@@ -225,6 +178,7 @@ body.theme-friendly .btn-primary:hover {
     justify-content:center;
     align-items:center;
     padding:1.5rem;
+    margin: 3%;
     max-width:250px;
     aspect-ratio:1/1;
 }
@@ -232,6 +186,21 @@ body.theme-friendly .btn-primary:hover {
 .fb-card img {
     width:80px;
     height:80px;
+}
+
+.google-card {
+    background:gold;
+    border-radius:.5rem;
+    color:white;
+    display:flex;
+    direction:column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    margin: 3%;
+    padding:1.5rem;
+    max-width:250px;
+    aspect-ratio:1/1;
 }
 
 /* ============================================
@@ -243,6 +212,14 @@ body.theme-friendly .btn-primary:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.faq-item {
+  background: rgba(255,255,255);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 calc(50% - 2rem);
 }
    
 
@@ -293,24 +270,21 @@ body.theme-friendly .btn-primary:hover {
     margin-bottom: 1rem;
   }
 
-  /* Services section */
-  .services{
-    padding: .2rem 0 !important;
-  }
   .service-card {
-    margin-bottom: 1.25rem;
-    padding: .2rem !important;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem !important;
   }
 
-  .service-card h3 {
-    font-size: 1rem !important;
+  .service-card .card-title {
+
+    min-height: auto !important;
   }
 
-  .card {
-    padding: 0.2rem !important;
-    
-  }
-  
+  .service-card .card-text {
+
+    line-height: 1.6;
+  }  
 
   /* Gallery */
   .gallery-item img {
