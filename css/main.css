@@ -7,9 +7,8 @@
 }
 
 .section:nth-of-type(odd) {
-  background:rgba(101, 114, 147, 0.3);
+  background: rgba(101, 114, 147, 0.3);
 }
-
 
 /* ------------------------------------------------------------
    NAV
@@ -26,9 +25,11 @@
 
 /* Default link style */
 .navbar .nav-link {
-  color: #000 !important;          /* black text */
+  color: #000 !important; /* black text */
   font-weight: 600;
-  transition: color 0.25s ease, text-shadow 0.25s ease;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
 }
 
 /* Hover */
@@ -44,11 +45,13 @@
   padding-bottom: 4px;
 }
 
-
-
 /* ------------------------------------------------------------
    GALLERY STRIP
 ------------------------------------------------------------ */
+
+.gallery-strip {
+  display: flex;
+}
 
 .gallery-strip-item {
   width: 25%;
@@ -63,13 +66,19 @@
 }
 
 @media (max-width: 992px) {
-  .gallery-strip-item { width: 33.33%; height: 400px; }
+  .gallery-strip-item {
+    width: 33.33%;
+    height: 400px;
+  }
 }
 
 @media (max-width: 768px) {
-  .gallery-strip-item { width: 100%; height: 300px; min-width: 0; }
+  .gallery-strip-item {
+    width: 100%;
+    height: 300px;
+    min-width: 0;
+  }
 }
-
 
 /* ------------------------------------------------------------
    HERO — FULL-WIDTH ROTATOR WITH TEXT OVERLAY
@@ -105,7 +114,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
 
@@ -116,39 +125,45 @@
   color: white;
 }
 
-
 /* ------------------------------------------------------------
    SPACING
 ------------------------------------------------------------ */
 
 .hairline {
   border: none;
-  border-top: 1px solid rgba(0,0,0,0.18);
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
   margin: 3rem 0;
 }
 
-.section-spacer { height: 40px; }
-
+.section-spacer {
+  height: 40px;
+}
 
 /* ------------------------------------------------------------
    ABOUT
 ------------------------------------------------------------ */
 
 .about-card {
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .about-feature {
   background: linear-gradient(
     135deg,
-    rgba(59,130,246,0.25),
-    rgba(29,78,216,0.25)
+    rgba(59, 130, 246, 0.25),
+    rgba(29, 78, 216, 0.25)
   );
   border-radius: var(--bs-border-radius);
 }
 
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 /* ------------------------------------------------------------
    TESTIMONIALS
@@ -157,28 +172,26 @@
 .testimonial-card,
 .testimonial-spotlight,
 .testimonial-carousel-item {
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(6px);
   border-radius: var(--bs-border-radius);
 }
 
 #testimonialCarousel .carousel-item {
-  min-height: 260px; /* adjust to your tallest testimonial */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* prevents content from covering the next slide */
+  min-height: 350px;
 }
 
 .testimonial-carousel-item {
+  height: 100%;
   max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-
 /* ------------------------------------------------------------
-   CTA BUTTON
+   CTA
 ------------------------------------------------------------ */
 
 .btn-text-us {
@@ -189,69 +202,15 @@
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.1s ease, background 0.2s ease;
+  transition:
+    transform 0.1s ease,
+    background 0.2s ease;
 }
 
 .btn-text-us:hover {
   background: var(--color-primary-dark);
   transform: translateY(-1px);
 }
-
-
-/* ------------------------------------------------------------
-   SERVICES
------------------------------------------------------------- */
-
-.service-block {
-  position: relative;
-  overflow: hidden;
-  background: var(--color-surface);
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Background image layer */
-.service-block .service-bg {
-  position: absolute;
-  inset: 0;
-  background-image: var(--service-img);
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  filter: grayscale(100%) brightness(0.45);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  z-index: 1;
-}
-
-/* Content stays above */
-.service-block .service-content {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  color: var(--color-text);
-  transition: color 0.3s ease;
-}
-
-/* Hover effect */
-.service-block:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-medium);
-}
-
-.service-block:hover .service-bg {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.service-block:hover .service-content {
-  color: var(--color-surface);
-}
-
-.service-block:hover i {
-  color: var(--color-accent);
-}
-
 
 /* ------------------------------------------------------------
    CONTACT
@@ -280,14 +239,19 @@
   font-weight: 500;
 }
 
-
 /* ------------------------------------------------------------
    ANIMATIONS
 ------------------------------------------------------------ */
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-scroll {
@@ -297,8 +261,14 @@
 }
 
 @keyframes heroFloatIn {
-  0% { opacity: 0; transform: translateY(30px) scale(0.98); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .hero-animate {
@@ -310,9 +280,8 @@
    Makes service cards wider on mobile
 =========================================== */
 @media (max-width: 768px) {
-
   .service-block {
-    width: calc(100% - .5rem) !important;   /* wider card */
+    width: calc(100% - 0.5rem) !important; /* wider card */
     margin-left: auto !important;
     margin-right: auto !important;
     padding: 1.25rem !important;

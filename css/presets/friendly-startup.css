@@ -5,7 +5,7 @@
 
 body.theme-friendly {
   /* Typography */
-  --bs-body-font-family: 'Merriweather', serif;
+  --bs-body-font-family: "Merriweather", serif;
   font-size: 1.125rem;
   line-height: 1.65;
 
@@ -14,10 +14,20 @@ body.theme-friendly {
 }
 
 /* Headings */
-body.theme-friendly h1 { font-size: 2.75rem; line-height: 1.2; }
-body.theme-friendly h2 { font-size: 2.25rem; line-height: 1.25; }
-body.theme-friendly h3 { font-size: 1.75rem; }
-body.theme-friendly h4 { font-size: 1.35rem; }
+body.theme-friendly h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+body.theme-friendly h2 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+}
+body.theme-friendly h3 {
+  font-size: 1.75rem;
+}
+body.theme-friendly h4 {
+  font-size: 1.35rem;
+}
 
 /* Lead text */
 body.theme-friendly .lead {
@@ -28,7 +38,7 @@ body.theme-friendly .lead {
 /* Navigation (keeps white surface, no color override) */
 body.theme-friendly .navbar {
   background-color: var(--color-surface);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 body.theme-friendly .nav-link {
@@ -50,7 +60,7 @@ body.theme-friendly .btn-primary {
 body.theme-friendly .btn-primary {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  box-shadow: 0 8px 20px rgba(59,130,246,0.25);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
 }
 
 body.theme-friendly .btn-primary:hover {
@@ -60,8 +70,14 @@ body.theme-friendly .btn-primary:hover {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-scroll {
@@ -71,8 +87,14 @@ body.theme-friendly .btn-primary:hover {
 }
 
 @keyframes heroFloatIn {
-  0% { opacity: 0; transform: translateY(30px) scale(0.98); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .hero-animate {
@@ -106,80 +128,38 @@ body.theme-friendly .btn-primary:hover {
 }
 
 @media (max-width: 768px) {
-  .hero-image-rotator { height: 220px; }
+  .hero-image-rotator {
+    height: 220px;
+  }
 }
 
 /* ------------------------------------------------------------
-   SERVICE CARD — Friendly Mode
+   SERVICES SECTION
 ------------------------------------------------------------ */
+
 .service-card {
-  position: relative;
-  overflow: hidden;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 calc(50% - 2rem);
 }
-
-
-/* Dark overlay for readability */
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-  opacity: 0.25;
-  transition: opacity 0.4s ease;
-  z-index: 2;
-}
-
-/* Hover effect */
-.service-card:hover::before {
-  opacity: 0.28;
-}
-
-.service-card:hover::after {
-  opacity: 0.35;
-}
-
-/* Ensure content stays above overlays */
-.service-card > * {
-  position: relative;
-  z-index: 3;
-}
-
-
-.service-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  text-align: left;
-}
-
-.service-card.open { border: none !important; }
-
-.card-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* ------------------------------------------------------------
-   SERVICES SHADOW BOX — BLACK, YELLOW, GREY
------------------------------------------------------------- */
-
-/* .service-card:nth-of-type(even) {
-  background: rgba(11, 17, 32, 0.30);
-}
-
-.service-card:nth-of-type(odd) {
-  background: rgb(229, 183, 29)
-} */
 
 /* ================================
    REVIEW SUMMARY SECTION
 ================================ */
 
+.main-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
 #review-summary {
   background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
 }
 
 #review-summary .stars {
@@ -191,6 +171,7 @@ body.theme-friendly .btn-primary:hover {
 #review-summary .review-logos {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
@@ -211,13 +192,76 @@ body.theme-friendly .btn-primary:hover {
   font-size: 1rem;
   border-radius: 6px;
 }
+.reviews-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.fb-card {
+  background: dodgerblue;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 3%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+}
+
+.fb-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.google-card {
+  background: gold;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+  padding: 1.5rem;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+}
+
+/* ============================================
+    FAQ
+   ============================================ */
+
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 calc(50% - 2rem);
+}
 
 /* ============================================
    MOBILE LAYOUT FIX — Friendly Theme
    Makes every section breathe properly
    ============================================ */
 @media (max-width: 768px) {
-
   /* Global spacing */
   body {
     padding: 0 1rem;
@@ -225,7 +269,7 @@ body.theme-friendly .btn-primary:hover {
   }
 
   .btn {
-    padding:  1rem;
+    padding: 1rem;
   }
 
   main#content {
@@ -237,7 +281,8 @@ body.theme-friendly .btn-primary:hover {
   }
 
   /* Headings */
-  h1, .hero-title {
+  h1,
+  .hero-title {
     font-size: 1.5rem !important;
     line-height: 1.25;
     margin-bottom: 0.75rem;
@@ -259,24 +304,19 @@ body.theme-friendly .btn-primary:hover {
     margin-bottom: 1rem;
   }
 
-  /* Services section */
-  .services{
-    padding: .2rem 0 !important;
-  }
   .service-card {
-    margin-bottom: 1.25rem;
-    padding: .2rem !important;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem !important;
   }
 
-  .service-card h3 {
-    font-size: 1rem !important;
+  .service-card .card-title {
+    min-height: auto !important;
   }
 
-  .card {
-    padding: 0.2rem !important;
-    
+  .service-card .card-text {
+    line-height: 1.6;
   }
-  
 
   /* Gallery */
   .gallery-item img {
@@ -285,7 +325,9 @@ body.theme-friendly .btn-primary:hover {
   }
 
   /* Testimonials */
-  .testimonial-item {
+
+  .testimonial-carousel-item {
+    height: 100%;
     padding: 1rem !important;
     margin-bottom: 1.25rem;
   }
