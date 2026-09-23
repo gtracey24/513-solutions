@@ -1,13 +1,16 @@
-<section id="hero" class="section hero-{{HERO_VARIANT}}">
-    <div class="row">
-        <div class="img-1">
-            <img src="{{HERO_IMAGE_1}}" alt="Hero Image 1">
-        </div>
-        <div class="img-2">
-            <img src="{{HERO_IMAGE_2}}" alt="Hero Image 2">
-        </div>
-        <div class="img-3">
-            <img src="{{HERO_IMAGE_3}}" alt="Hero Image 3">
-        </div>
+<section id="hero-three-panel" class="section hero-{{HERO_VARIANT}}">
+
+    <div class="hero-images">
+        {{HERO_IMAGES}}
     </div>
+
+    <div class="hero-content">
+        <h1>{{HERO_HEADLINE}}</h1>
+        <p class=" lead">{{HERO_SUBHEADLINE}}</p>
+
+        <a href="{{HERO_CTA_URL}}" class="btn btn-primary">
+            {{HERO_CTA_LABEL}}
+        </a>
+    </div>
+
 </section>

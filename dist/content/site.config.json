@@ -12,11 +12,11 @@
   "design": {
     "theme": "friendly",
     "stylesheet": "friendly-startup.css",
-    "heroVariant": "split-gallery",
+    "heroVariant": "three-panel",
     "aboutVariant": "about-left-image",
     "serviceStyle": "service-card-simple",
     "processStyle": "default",
-    "galleryStyle": "gallery-hero-full",
+    "galleryStyle": "gallery-grid",
     "testimonialVariant": "testimonials-carousel",
     "formVariant": "form-external"
   },
