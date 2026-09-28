@@ -172,6 +172,23 @@ body.theme-friendly .btn-primary:hover {
   background: rgba(0, 0, 0, 0.45);
 }
 
+.hero-content h1 {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.hero-content p:has(+ .btn) {
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+.btn {
+    animation: fade-in 3s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 #hero::before {
   content: "";
   position: absolute;
