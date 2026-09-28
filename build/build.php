@@ -281,6 +281,7 @@ if (!empty($config['reviews'])) {
       '{{REVIEWS_TOTAL}}',
       '{{REVIEWS_GOOGLE}}',
       '{{REVIEWS_FACEBOOK}}',
+      '{{REVIEWS_BACKGROUND_IMAGE}}',
       '{{REVIEWS_CTA_LABEL}}',
       '{{REVIEWS_CTA_LINK}}'
     ],
@@ -289,6 +290,7 @@ if (!empty($config['reviews'])) {
       ($config['reviews']['googleCount'] + $config['reviews']['facebookCount']),
       $config['reviews']['googleCount'] ?? '',
       $config['reviews']['facebookCount'] ?? '',
+      $config['reviews']['backgroundImage'] ?? '',
       $config['reviews']['ctaLabel'] ?? '',
       $config['reviews']['ctaLink'] ?? ''
     ],
@@ -449,6 +451,7 @@ $replacements = [
   '{{REVIEWS_AVERAGE}}' => $config['reviews']['averageRating'] ?? '',
   '{{REVIEWS_GOOGLE}}' => $config['reviews']['googleCount'] ?? '',
   '{{REVIEWS_FACEBOOK}}' => $config['reviews']['facebookCount'] ?? '',
+  '{{REVIEWS_BACKGROUND_IMAGE}}' => $config['reviews']['backgroundImage'] ?? '',
   '{{REVIEWS_TOTAL}}' => ($config['reviews']['googleCount'] + $config['reviews']['facebookCount']) ?? '',
   '{{REVIEWS_CTA_LABEL}}' => $config['reviews']['ctaLabel'] ?? '',
   '{{REVIEWS_CTA_LINK}}' => $config['reviews']['ctaLink'] ?? '',

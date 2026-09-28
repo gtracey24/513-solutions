@@ -250,14 +250,13 @@ body.theme-friendly .btn-primary:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 0;
+  flex-wrap: wrap-reverse;
 }
-#review-summary {
+/* #review-summary {
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-}
+} */
 
 #review-summary .stars {
   font-size: 2rem;
@@ -301,7 +300,6 @@ body.theme-friendly .btn-primary:hover {
 }
 
 .fb-card {
-  background: dodgerblue;
   border-radius: 0.5rem;
   color: white;
   display: flex;
@@ -315,13 +313,12 @@ body.theme-friendly .btn-primary:hover {
   aspect-ratio: 1/1;
 }
 
-.fb-card img {
+#reviews-summary .img {
   width: 80px;
   height: 80px;
 }
 
 .google-card {
-  background: gold;
   border-radius: 0.5rem;
   color: white;
   display: flex;
