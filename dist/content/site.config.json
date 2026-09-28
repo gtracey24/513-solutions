@@ -187,6 +187,7 @@
   "testimonials": {
     "headline": "What People Say",
     "itemStyle": "carousel-item-fb",
+    "backgroundImage": "/assets/images/background-4.jpg",
     "items": [
       {
         "text": "Jordan and his crew did a fantastic job replacing our back outside steps.",

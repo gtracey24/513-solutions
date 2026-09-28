@@ -245,12 +245,14 @@ if (!empty($config['testimonials']['items'])) {
         '{{TESTIMONIAL_AUTHOR}}',
         '{{TESTIMONIAL_ROLE}}',
         '{{TESTIMONIAL_AVATAR}}',
+        '{{TESTIMONIAL_BACKGROUND_IMAGE}}',
         '{{ACTIVE_CLASS}}'
       ],
       [
         $t['text'],
         $t['author'],
         $t['role'],
+        $t['backgroundImage'] ?? '',
         $t['avatar'] ?? '',
         $index === 0 ? 'active' : ''
       ],
@@ -427,6 +429,7 @@ $replacements = [
 
   '{{TESTIMONIALS_VARIANT}}' => $config['design']['testimonialVariant'] ?? '',
   '{{TESTIMONIALS_HEADLINE}}' => $config['testimonials']['headline'] ?? '',
+  '{{TESTIMONIALS_BACKGROUND_IMAGE}}' => $config['testimonials']['backgroundImage'] ?? '',
 
   '{{FORM_HEADLINE}}' => $config['form']['headline'] ?? '',
   '{{FORM_DESCRIPTION}}' => $config['form']['description'] ?? '',
