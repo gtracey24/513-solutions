@@ -42,7 +42,7 @@
     ],
     "url": "#form",
     "cta": {
-      "label": "Get Started",
+      "label": "Get in touch",
       "url": "#contact"
     }
   },
@@ -56,6 +56,9 @@
     "description": ""
   },
   "navigation": [
+    {
+      "label": "📞618.363.6451 |"
+    },
     {
       "label": "Services",
       "url": "#services"
