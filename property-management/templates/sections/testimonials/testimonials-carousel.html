@@ -1,0 +1,45 @@
+<section class="section py-5 px-5 fade-in">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">What Clients Are Saying</h2>
+    <style>
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    color: #1877f2; /* Facebook blue */
+  }
+
+  .badge-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #1877f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+
+  .badge-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+</style>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {{TESTIMONIAL_ITEMS}}
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
