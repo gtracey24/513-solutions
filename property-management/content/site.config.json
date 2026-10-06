@@ -26,7 +26,7 @@
 "hero": {
   "headline": "Your property managed by the<br>513 Solutions team.",
   "subheadline": "Whether you live here or invest here, we make property management simple, responsive, and stress‑free.",
-  "image": "/assets/images/sarah.jpg",
+  "image": "assets/images/sarah.jpg",
 "cta": [
   {
     "CTA_LABEL": "For Tenants",
