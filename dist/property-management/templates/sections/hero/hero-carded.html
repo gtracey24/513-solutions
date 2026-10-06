@@ -1,0 +1,23 @@
+<section id="hero" class="section hero-wrapper d-flex align-items-center" style="min-height: 60vh;">
+  
+  <div class="hero-bg" style="
+    background: url('{{HERO_IMAGE}}') right top no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  "></div>
+
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="card p-4 p-md-5 shadow-lg" style="max-width: 600px;">
+      <h1 class="display-5 mb-3">{{HERO_HEADLINE}}</h1>
+      <p class="lead mb-4">{{HERO_SUBHEADLINE}}</p>
+
+      <a href="{{HERO_CTA_URL}}" class="btn btn-primary">
+        {{HERO_CTA_LABEL}}
+      </a>
+    </div>
+  </div>
+
+</section>
